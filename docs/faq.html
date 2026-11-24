@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Hilfe &amp; FAQ | HJ Support</title>
+		<link rel="stylesheet" href="assets/style.css">
+		<script src="assets/support.js" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-inner">
+				<a href="index.html" aria-label="Startseite"><img class="logo" src="assets/logo-hj.jpg" alt="Hilti &amp; Jehle"></a>
+				<div class="brand">HJ Support<small>Digitale Werkzeuge &amp; Dokumentation</small></div>
+				<span class="status">OFFLINE · LOKAL</span>
+			</div>
+		</header>
+		<div class="layout">
+			<nav class="sidebar" aria-label="Hauptnavigation">
+				<div class="label">Supportportal</div>
+				<a href="index.html">Übersicht</a>
+				<a href="urbgen.html">UrbGEN</a>
+				<a href="faq.html" aria-current="page">FAQ & Hilfe</a>
+				<a href="versionen.html">Versionshistorie</a>
+			</nav>
+			<main>
+				<div class="breadcrumb">Support / FAQ &amp; Hilfe</div>
+				<div class="hero">
+					<div class="eyebrow">HJ · Digitales Planen</div>
+					<h1>Hilfe &amp; FAQ</h1>
+					<p>Lösungen für typische Fragen bei der Arbeit mit UrbGEN.</p>
+				</div>
+				<section class="panel" id="faq">
+					<h2>Häufige Fragen</h2>
+					<div class="faq">
+						<details>
+							<summary>Die 3D-Gebäude sind nicht sichtbar.</summary>
+							<p>Prüfe im Reiter 3D erstellen, welches Teilbild ausgewählt wurde, und ob dieses im Projekt sichtbar geschaltet ist. Prüfe, ob du Erstellen betätigt hast.</p>
+						</details>
+						<details>
+							<summary>Der Tutorial-Link funktioniert nicht.</summary>
+							<p>Prüfe die Verbindung zum Firmenserver bzw. zum gemeinsamen Allplan-Standard. Die Supportdateien müssen am zentralen Ablageort vorhanden sein.</p>
+						</details>
+					</div>
+					<div class="faq">
+						<details>
+							<summary>Es werden keine Gebäude erzeugt.</summary>
+							<p>Prüfe, ob die Grundstücksgrenze geschlossen und eben ist. Reduziere testweise den Grundstück Offset, den Mindestabstand oder die minimalen Gebäudeabmessungen. Stelle sicher, dass mindestens eine Gebäudeform aktiviert ist.</p>
+						</details>
+						<details>
+							<summary>BFZ oder BNZ weichen deutlich vom Zielwert ab.</summary>
+							<p>Die Zielwerte können durch Grundstücksform, Abmessungen, Abstände und maximale Gebäudeanzahl eingeschränkt sein. Prüfe zuerst diese Vorgaben und erhöhe bei Bedarf den Suchaufwand.</p>
+						</details>
+						<details>
+							<summary>Die Berechnung dauert zu lange.</summary>
+							<p>Reduziere die Variantenanzahl, Generierungsversuche oder die Population und Generationen. Beginne mit den Standardeinstellungen.</p>
+						</details>
+						<details>
+							<summary>Ich möchte andere Varianten erhalten.</summary>
+							<p>Ändere den Seed oder die Gebäudeparameter. Vergleiche anschließend die neuen Ergebnisse mit den bisherigen Varianten.</p>
+						</details>
+						<details>
+							<summary>Eigene Nodes werden nicht gefunden.</summary>
+							<p>Prüfe, ob die UrbGEN-Nodes für Allplan 2027 im zentralen Bürostandard (STD) bereitgestellt wurden und die zugehörigen Dateien zugänglich sind. Starte Allplan gegebenenfalls neu. Melde fehlende Nodes dem Support; eine eigene Installation im USR ist für Anwender nicht vorgesehen.</p>
+						</details>
+						<details>
+							<summary>Sind die Abstandsflächen baurechtlich verbindlich?</summary>
+							<p>Nein. Die Darstellung dient der visuellen Kontrolle im Vorentwurf. Die geltenden Vorschriften und die projektspezifischen Anforderungen müssen separat geprüft werden.</p>
+						</details>
+					</div>
+				</section>
+
+				<section class="panel" id="meldung">
+					<h2>Problem melden</h2>
+					<p>Wenn ein Fehler weiterhin auftritt, halte folgende Informationen für die interne Weitergabe bereit:</p>
+					<ul>
+						<li>Allplan-Version und UrbGEN-Version</li>
+						<li>Screenshot der Palette und Fehlermeldung</li>
+						<li>Grundstücksgeometrie und Einstellungen</li>
+						<li>Schritte, mit denen sich das Problem nachvollziehen lässt</li>
+					</ul>
+					<p>Interner Ansprechpartner für die Dokumentation: <b>Lukas Burtscher</b>.</p>
+				</section>
+			</main>
+		</div>
+		<footer class="footer"><span>© 2026 Lukas Burtscher · Dokumentation</span><span>Hilti &amp; Jehle · Lokaler Support</span></footer>
+	</body>
+</html>
