@@ -1265,7 +1265,7 @@
         <Enabled>True</Enabled>
         <ID>ruqrxvxtdvpvtwrvayxdbpaevqsbqbdt</ID>
         <DefaultValues>
-            <DefaultValue Name="TutorialLink">Z:\Programme\Allplan2027\Std\Library\VisualScripting\Support\UrbGEN_Tutorial.html</DefaultValue>
+            <DefaultValue Name="TutorialLink">https://lukasburtscher2003.github.io/handy-dandy-allplan-docs/</DefaultValue>
             <DefaultValue Name="InfoPicture" Text="Der Knopf hier führt zur Startseite der HJ-Tools Website" />
         </DefaultValues>
     </SubElement>
