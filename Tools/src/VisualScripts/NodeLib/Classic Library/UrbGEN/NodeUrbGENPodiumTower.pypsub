@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENPodiumTower.py</Name>
+    <Uuid>0f4d88e0-36a8-5bdf-95c4-fec1f5ff46b5</Uuid>
+    <Title>UrbGEN PodiumTower</Title>
+    <TextId>3300</TextId>
+    <Version>0.7</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>X</Name>
+      <Text>X</Text>
+      <TextId>3301</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Y</Name>
+      <Text>Y</Text>
+      <TextId>3302</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Z</Name>
+      <Text>Z</Text>
+      <TextId>3303</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Lengths</Name>
+      <Text>Lengths</Text>
+      <TextId>3304</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Widths</Name>
+      <Text>Widths</Text>
+      <TextId>3305</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>AnglesDeg</Name>
+      <Text>AnglesDeg</Text>
+      <TextId>3306</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Floors</Name>
+      <Text>Floors</Text>
+      <TextId>3307</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TypologyCodes</Name>
+      <Text>TypologyCodes</Text>
+      <TextId>3308</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumFloors</Name>
+      <Text>PodiumFloors</Text>
+      <TextId>3309</TextId>
+      <Value>2</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumScale</Name>
+      <Text>PodiumScale</Text>
+      <TextId>3310</TextId>
+      <Value>1.25</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>FloorHeight</Name>
+      <Text>FloorHeight</Text>
+      <TextId>3311</TextId>
+      <Value>3000</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ArmLengthRatio</Name>
+      <Text>ArmLengthRatio</Text>
+      <TextId>3312</TextId>
+      <Value>1.3</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>PodiumX</Name>
+      <Text>PodiumX</Text>
+      <TextId>3400</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumY</Name>
+      <Text>PodiumY</Text>
+      <TextId>3401</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumZ</Name>
+      <Text>PodiumZ</Text>
+      <TextId>3402</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumLengths</Name>
+      <Text>PodiumLengths</Text>
+      <TextId>3403</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumWidths</Name>
+      <Text>PodiumWidths</Text>
+      <TextId>3404</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumAnglesDeg</Name>
+      <Text>PodiumAnglesDeg</Text>
+      <TextId>3405</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumTypologyCodes</Name>
+      <Text>PodiumTypologyCodes</Text>
+      <TextId>3406</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumHeights</Name>
+      <Text>PodiumHeights</Text>
+      <TextId>3407</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TowerX</Name>
+      <Text>TowerX</Text>
+      <TextId>3408</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TowerY</Name>
+      <Text>TowerY</Text>
+      <TextId>3409</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TowerZ</Name>
+      <Text>TowerZ</Text>
+      <TextId>3410</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TowerLengths</Name>
+      <Text>TowerLengths</Text>
+      <TextId>3411</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TowerWidths</Name>
+      <Text>TowerWidths</Text>
+      <TextId>3412</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TowerAnglesDeg</Name>
+      <Text>TowerAnglesDeg</Text>
+      <TextId>3413</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TowerTypologyCodes</Name>
+      <Text>TowerTypologyCodes</Text>
+      <TextId>3414</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TowerHeights</Name>
+      <Text>TowerHeights</Text>
+      <TextId>3415</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TowerFloors</Name>
+      <Text>TowerFloors</Text>
+      <TextId>3416</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumAreasM2</Name>
+      <Text>PodiumAreasM2</Text>
+      <TextId>3417</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TowerAreasM2</Name>
+      <Text>TowerAreasM2</Text>
+      <TextId>3418</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IsValid</Name>
+      <Text>IsValid</Text>
+      <TextId>3419</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ErrorMessage</Name>
+      <Text>ErrorMessage</Text>
+      <TextId>3420</TextId>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Element>
+    <StringTable script="Dev-Tutorial.pyp" />
+    <Item>
+        <TextId>1</TextId>
+        <Text>Tab name</Text>
+        <Type>PageText</Type>
+    </Item>
+    <Item>
+        <TextId>2</TextId>
+        <Text>Unassigned</Text>
+        <Type>PageText</Type>
+    </Item>
+    <Item>
+        <TextId>3</TextId>
+        <Text>TutorialButton</Text>
+        <Type>ExpanderText</Type>
+    </Item>
+</Element>

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENSetbackSurfaces.py</Name>
+    <Uuid>3d89e5c8-7af3-4b96-8c7d-1c6966b9a001</Uuid>
+    <Title>UrbGEN SetbackSurfaces</Title>
+    <TextId>3600</TextId>
+    <Version>0.3</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>Footprints</Name>
+      <Text>Gebäudegrundrisse</Text>
+      <TextId>3601</TextId>
+      <Value />
+      <ValueType>list{Polygon3D}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Heights</Name>
+      <Text>Gebäudehöhen</Text>
+      <TextId>3602</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>Einstellungen</Name>
+    <Parameter>
+      <Name>HeightFactor</Name>
+      <Text>Höhenfaktor</Text>
+      <TextId>3603</TextId>
+      <Value>0.6</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>GroundZ</Name>
+      <Text>Grundebene Z</Text>
+      <TextId>3604</TextId>
+      <Value>0</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+  <Parameter><Name>ShowSurfaces</Name><Text>Abstandsflächen anzeigen</Text><TextId>3605</TextId><Value>True</Value><ValueType>CheckBox</ValueType></Parameter></Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>SetbackSurfaces</Name>
+      <Text>Abstandsflächen</Text>
+      <TextId>3641</TextId>
+      <Value />
+      <ValueType>list{Polygon3D}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>BuildingIndices</Name>
+      <Text>Gebäudeindizes je Fläche</Text>
+      <TextId>3642</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>SetbackDistances</Name>
+      <Text>Abstand je Gebäude</Text>
+      <TextId>3643</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>SurfaceCounts</Name>
+      <Text>Flächenzahl je Gebäude</Text>
+      <TextId>3644</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IsValid</Name>
+      <Text>Gültig</Text>
+      <TextId>3645</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ErrorMessage</Name>
+      <Text>Fehlertext</Text>
+      <TextId>3646</TextId>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

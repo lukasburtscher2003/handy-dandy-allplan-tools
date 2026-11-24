@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Element>
+  <LanguageFile>.\Navigation</LanguageFile>
+  <Script>
+    <Name>.\NodeVariantNavigation.py</Name>
+    <Uuid>75890245-d9f9-41d4-bd20-d1020e5ff7c5</Uuid>
+    <Title>Variant Navigation - previous/next buttons</Title>
+    <TextId>1001</TextId>
+    <Version>0.1.1</Version>
+  </Script>
+  <Page>
+    <Name>__IN__</Name>
+    <Parameter>
+      <Name>VariantCount</Name><Text>Number of variants</Text><TextId>1002</TextId>
+      <Value>5</Value><ValueType>Integer</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT_WITH_CONTROL__</Name>
+    <Parameter>
+      <Name>CurrentVariant</Name><Text>Selected variant (0-based)</Text><TextId>1003</TextId>
+      <Value>0</Value><ValueType>Integer</ValueType>
+      <VisibleInPalette>False</VisibleInPalette>
+    </Parameter>
+    <Parameter>
+      <Name>NavigationRow</Name><Text>Variantennavigation</Text><TextId>1004</TextId>
+      <ValueType>Row</ValueType>
+      <Parameter>
+        <Name>PreviousButton</Name>
+        <Text>Zurück</Text>
+        <TextId>1005</TextId>
+        <EventId>100</EventId>
+        <Value>8632</Value>
+        <ValueType>PictureResourceButton</ValueType>
+      </Parameter>
+      <Parameter>
+        <Name>VariantDisplay</Name><Text>Variante</Text><TextId>1006</TextId>
+        <Value>Variante 1 von 5</Value><ValueType>Text</ValueType><Orientation>Middle</Orientation>
+      </Parameter>
+      <Parameter>
+        <Name>NextButton</Name>
+        <Text>Weiter</Text>
+        <TextId>1007</TextId>
+        <EventId>101</EventId>
+        <Value>8631</Value>
+        <ValueType>PictureResourceButton</ValueType>
+      </Parameter>
+    </Parameter>
+  </Page>
+  <Page><Name>__HiddenPage__</Name>
+    <Parameter><Name>Executed</Name><Value>False</Value><ValueType>CheckBox</ValueType></Parameter>
+  </Page>
+</Element>

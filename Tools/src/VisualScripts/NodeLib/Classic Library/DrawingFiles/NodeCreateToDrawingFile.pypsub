@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Element>
+    <Script>
+        <Name>.\NodeCreateToDrawingFile.py</Name>
+        <Uuid>Diese-N0de-wurd3-se1bst-erste11t</Uuid>
+        <Title>Export PythonPart elements to drawing files on button press</Title>
+        <TextId>1061</TextId>
+        <Version>1.0</Version>
+    </Script>
+    <Page>
+        <Name>Apply</Name>
+        <Parameter>
+        <Name>Row1</Name>
+        <Text>In Teilbild erstellen</Text>
+        <ValueType>Row</ValueType>
+        <Parameter>
+            <Name>Apply</Name>
+            <Text>Apply</Text>
+            <EventId>100</EventId>
+            <Value>10427</Value>
+            <ValueType>PictureResourceButton</ValueType>
+        </Parameter>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>__IN_MANDATORY__</Name>
+        <Parameter>
+            <Name>FileNumbers</Name>
+            <Text>File numbers</Text>
+            <TextId>1062</TextId>
+            <Value></Value>
+            <ValueType>list{Integer}</ValueType>
+        </Parameter>
+        <Parameter>
+            <Name>Elements</Name>
+            <Text>Elements</Text>
+            <TextId>1063</TextId>
+            <Value></Value>
+            <ValueType>list{$Element}</ValueType>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>__HiddenPage__</Name>
+        <Parameter>
+            <Name>Executed</Name>
+            <Value>False</Value>
+            <ValueType>CheckBox</ValueType>
+        </Parameter>
+    </Page>
+</Element>

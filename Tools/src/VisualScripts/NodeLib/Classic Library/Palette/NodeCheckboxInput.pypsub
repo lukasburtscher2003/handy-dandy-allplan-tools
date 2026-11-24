@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Element>
+    <LanguageFile>.\InputControls</LanguageFile>
+    <Script>
+        <Name>.\NodeCheckboxInput.py</Name>
+        <Uuid>kaueroijasldjfauerasnsmcamspoyoi</Uuid>
+        <Title>Input control for a checkbox value</Title>
+        <TextId>1241</TextId>
+        <Version>1.0</Version>
+    </Script>
+    <Page>
+        <Name>String input</Name>
+        <Parameter>
+            <Name>Checkbox</Name>
+            <Text>Checkbox</Text>
+            <TextId>1243</TextId>
+            <Value>0</Value>
+            <ValueType>CheckBox</ValueType>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>__HiddenPage__</Name>
+        <Parameter>
+            <Name>Executed</Name>
+            <Value>False</Value>
+            <ValueType>CheckBox</ValueType>
+        </Parameter>
+    </Page>
+</Element>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script><Name>.\NodeUrbGENCollisionCheck.py</Name><Uuid>217a4092-ebf3-4180-ad69-334004e2612d</Uuid><Title>UrbGEN CollisionCheck</Title><TextId>1101</TextId><Version>0.1</Version></Script>
+  <Page><Name>__IN_MANDATORY__</Name>
+    <Parameter><Name>ObjectsA</Name><Text>Objects A</Text><TextId>1102</TextId><Value></Value><ValueType>list{}</ValueType><ListState>1</ListState><ListStateRange>1</ListStateRange></Parameter>
+    <Parameter><Name>ObjectsB</Name><Text>Objects B</Text><TextId>1103</TextId><Value></Value><ValueType>list{}</ValueType><ListState>1</ListState><ListStateRange>1</ListStateRange></Parameter>
+    <Parameter><Name>Tolerance</Name><Text>Tolerance [m²]</Text><TextId>1104</TextId><Value>0.001</Value><ValueType>Double</ValueType></Parameter>
+  </Page>
+  <Page><Name>__OUT__</Name>
+    <Parameter><Name>CollisionAreas</Name><Text>Collision Areas [m²]</Text><TextId>1105</TextId><Value></Value><ValueType>list{Double}</ValueType></Parameter>
+    <Parameter><Name>CollisionStates</Name><Text>Collision States</Text><TextId>1106</TextId><Value></Value><ValueType>list{CheckBox}</ValueType></Parameter>
+    <Parameter><Name>ValidResults</Name><Text>Valid Results</Text><TextId>1107</TextId><Value></Value><ValueType>list{CheckBox}</ValueType></Parameter>
+    <Parameter><Name>ErrorMessages</Name><Text>Error Messages</Text><TextId>1108</TextId><Value></Value><ValueType>list{String}</ValueType></Parameter>
+  </Page>
+  <Page><Name>__HiddenPage__</Name>
+    <Parameter><Name>CreateModelObjects</Name><Value>False</Value><ValueType>CheckBox</ValueType></Parameter>
+    <Parameter><Name>CreateModelPreviewObjects</Name><Value>False</Value><ValueType>CheckBox</ValueType></Parameter>
+    <Parameter><Name>Executed</Name><Value>False</Value><ValueType>CheckBox</ValueType></Parameter>
+  </Page>
+</Element>

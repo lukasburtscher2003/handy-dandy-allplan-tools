@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENEditBuilding.py</Name>
+    <Uuid>c808ac09-5485-57de-81b1-1ba6a33f6f1e</Uuid>
+    <Title>UrbGEN EditBuilding</Title>
+    <TextId>3500</TextId>
+    <Version>0.7.9</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>Boundary</Name>
+      <Text>Boundary</Text>
+      <TextId>3501</TextId>
+      <Value />
+      <ValueType>Polygon3D</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>X</Name>
+      <Text>X</Text>
+      <TextId>3502</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Y</Name>
+      <Text>Y</Text>
+      <TextId>3503</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Z</Name>
+      <Text>Z</Text>
+      <TextId>3504</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Lengths</Name>
+      <Text>Lengths</Text>
+      <TextId>3505</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Widths</Name>
+      <Text>Widths</Text>
+      <TextId>3506</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>AnglesDeg</Name>
+      <Text>AnglesDeg</Text>
+      <TextId>3507</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Floors</Name>
+      <Text>Floors</Text>
+      <TextId>3508</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TypologyCodes</Name>
+      <Text>TypologyCodes</Text>
+      <TextId>3509</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>BuildingIndex</Name>
+      <Text>BuildingIndex</Text>
+      <TextId>3510</TextId>
+      <Value>0</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>VariantIndex</Name>
+      <Text>VariantIndex</Text>
+      <TextId>3520</TextId>
+      <Value>0</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MinDistance</Name>
+      <Text>MinDistance</Text>
+      <TextId>3517</TextId>
+      <Value>5000</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ArmLengthRatio</Name>
+      <Text>ArmLengthRatio</Text>
+      <TextId>3518</TextId>
+      <Value>1.3</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>Gebäude bearbeiten</Name>
+    <Parameter>
+      <Name>BuildingCountDisplay</Name>
+      <Text>Gebäudeanzahl</Text>
+      <TextId>3585</TextId>
+      <Value>0</Value>
+      <ValueType>Text</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Row1</Name>
+      <Text>X / Y</Text>
+      <ValueType>Row</ValueType>
+      <Parameters>
+
+        <Parameter>
+          <Name>EditX</Name>
+          <Text>EditX</Text>
+          <TextId>3521</TextId>
+          <Value>0</Value>
+          <ValueType>Length</ValueType>
+        </Parameter>
+        <Parameter>
+          <Name>EditY</Name>
+          <Text>EditY</Text>
+          <TextId>3522</TextId>
+          <Value>0</Value>
+          <ValueType>Length</ValueType>
+        </Parameter>
+      </Parameters>
+    </Parameter>
+
+    <Parameter>
+      <Name>EditLength</Name>
+      <Text>EditLength</Text>
+      <TextId>3523</TextId>
+      <Value>10000</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>EditWidth</Name>
+      <Text>EditWidth</Text>
+      <TextId>3524</TextId>
+      <Value>10000</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>EditAngleDeg</Name>
+      <Text>EditAngleDeg</Text>
+      <TextId>3525</TextId>
+      <Value>0</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+        <Name>Separator</Name>
+        <ValueType>Separator</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>EditFloors</Name>
+      <Text>EditFloors</Text>
+      <TextId>3526</TextId>
+      <Value>1</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>FloorHeight</Name>
+      <Text>Geschosshöhe</Text>
+      <TextId>3532</TextId>
+      <Value>3000</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>EditHeight</Name>
+      <Text>Gebäudehöhe</Text>
+      <TextId>3534</TextId>
+      <Value>3000</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>FloorSnappingRow</Name>
+      <Text>Geschoss-Snapping</Text>
+      <TextId>3584</TextId>
+      <ValueType>Row</ValueType>
+      <Value>OVERALL:1</Value>
+      <Parameters>
+        <Parameter>
+          <Name>InfoPictureSnapping</Name>
+          <Text>Wenn der Haken gesetzt ist, kann die Gebäudehöhe nur in Geschoss-Schritten verändert werden.</Text>
+          <Value>19379</Value> <!-- Picture Rectangle INFO-Icon-->
+          <ValueType>Picture</ValueType>
+        </Parameter>
+
+        <Parameter>
+            <Name>HeightMode</Name>
+            <Text>Geschoss-Snapping</Text>
+            <TextId>3533</TextId>
+            <Value>False</Value>
+            <ValueType>CheckBox</ValueType>
+        </Parameter>
+      </Parameters>
+
+    </Parameter>
+    <Parameter>
+      <Name>ExpanderTypology</Name>
+      <Text>Gebäudeformen</Text>
+      <Value>False</Value>
+      <ValueType>Expander</ValueType>
+      <Parameters>
+        <Parameter>
+          <Name>EditTypologyCode</Name>
+          <Text>Gebäudeform</Text>
+          <TextId>3527</TextId>
+          <Value>0</Value>
+          <ValueType>RadioButtonGroup</ValueType>
+            <Parameter>
+              <Name>EditTypologyOption0</Name>
+              <Text>I – Rechteck</Text>
+              <TextId>3900</TextId>
+              <Value>0</Value>
+              <ValueType>RadioButton</ValueType>
+            </Parameter>
+            <Parameter>
+              <Name>EditTypologyOption1</Name>
+              <Text>L – Form</Text>
+              <TextId>3901</TextId>
+              <Value>1</Value>
+              <ValueType>RadioButton</ValueType>
+            </Parameter>
+            <Parameter>
+              <Name>EditTypologyOption2</Name>
+              <Text>T – Form</Text>
+              <TextId>3902</TextId>
+              <Value>2</Value>
+              <ValueType>RadioButton</ValueType>
+            </Parameter>
+            <Parameter>
+              <Name>EditTypologyOption3</Name>
+              <Text>H – Form</Text>
+              <TextId>3903</TextId>
+              <Value>3</Value>
+              <ValueType>RadioButton</ValueType>
+            </Parameter>
+            <Parameter>
+              <Name>EditTypologyOption4</Name>
+              <Text>C / U – Form</Text>
+              <TextId>3904</TextId>
+              <Value>4</Value>
+              <ValueType>RadioButton</ValueType>
+            </Parameter>
+            <Parameter>
+              <Name>EditTypologyOption5</Name>
+              <Text>Kreuz / Plus</Text>
+              <TextId>3905</TextId>
+              <Value>5</Value>
+              <ValueType>RadioButton</ValueType>
+            </Parameter>
+            <Parameter>
+              <Name>EditTypologyOption7</Name>
+              <Text>Innenhof</Text>
+              <TextId>3907</TextId>
+              <Value>7</Value>
+              <ValueType>RadioButton</ValueType>
+            </Parameter>
+        </Parameter>
+      </Parameters>
+    </Parameter>
+    <Parameter>
+      <Name>ShowBuildingHandles</Name>
+      <Text>Gebäudegriffe anzeigen</Text>
+      <TextId>3531</TextId>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ButtonRow</Name>
+      <Text></Text>
+      <ValueType>Row</ValueType>
+
+      <Parameter>
+        <Name>DeleteBuildingButton</Name>
+        <Text>Ausgewähltes Gebäude löschen</Text>
+        <EventId>102</EventId>
+        <Value>20349</Value>
+        <ValueType>PictureResourceButton</ValueType>
+      </Parameter>
+    </Parameter>
+    <Parameter>
+      <Name>ButtonRow</Name>
+      <Text></Text>
+      <ValueType>Row</ValueType>
+
+      <Parameter>
+        <Name>ResetVariantButton</Name>
+        <Text>Variante zurücksetzen</Text>
+        <EventId>103</EventId>
+        <Value>17027</Value>
+        <ValueType>PictureResourceButton</ValueType>
+      </Parameter>
+    </Parameter>
+    <Parameter>
+      <Name>TypologyConflictRow</Name>
+      <Text>Konflikte ignorieren</Text>
+      <TextId>3584</TextId>
+      <ValueType>Row</ValueType>
+      <Value>OVERALL:1</Value>
+      <Parameters>
+        <Parameter>
+          <Name>InfoPicture</Name>
+          <Text>Wenn aktiviert, bleiben Änderungen an Position, Länge, Breite, Winkel, Geschossen und Typologie trotz Grenz- oder Abstandskonflikten erhalten</Text>
+          <Value>19379</Value> <!-- Picture-->
+          <ValueType>Picture</ValueType>
+        </Parameter>
+
+        <Parameter>
+          <Name>AllowConflictingTypology</Name>
+          <Text>Alle Geometriekonflikte ignorieren</Text>
+          <TextId>3584</TextId>
+          <Value>True</Value>
+          <ValueType>CheckBox</ValueType>
+        </Parameter>
+      </Parameters>
+    </Parameter>
+
+
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>OutX</Name>
+      <Text>OutX</Text>
+      <TextId>3600</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutY</Name>
+      <Text>OutY</Text>
+      <TextId>3601</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutZ</Name>
+      <Text>OutZ</Text>
+      <TextId>3602</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutLengths</Name>
+      <Text>OutLengths</Text>
+      <TextId>3603</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutWidths</Name>
+      <Text>OutWidths</Text>
+      <TextId>3604</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutAnglesDeg</Name>
+      <Text>OutAnglesDeg</Text>
+      <TextId>3605</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutFloors</Name>
+      <Text>OutFloors</Text>
+      <TextId>3606</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutTypologyCodes</Name>
+      <Text>OutTypologyCodes</Text>
+      <TextId>3607</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>EditAccepted</Name>
+      <Text>EditAccepted</Text>
+      <TextId>3608</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IsValid</Name>
+      <Text>IsValid</Text>
+      <TextId>3609</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ErrorMessage</Name>
+      <Text>ErrorMessage</Text>
+      <TextId>3610</TextId>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>SelectedBuildingIndex</Name>
+      <Text>SelectedBuildingIndex</Text>
+      <TextId>3611</TextId>
+      <Value>0</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>SelectedVariantIndex</Name>
+      <Text>SelectedVariantIndex</Text>
+      <TextId>3612</TextId>
+      <Value>0</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutHeights</Name>
+      <Text>Gebäudehöhen für Extrusion</Text>
+      <TextId>3613</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Handles</Name>
+      <Text>Handles</Text>
+      <TextId>1006</TextId>
+      <Value />
+      <ValueType>list{$Handle}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>BuildingCount</Name>
+      <Text>Gebäudeanzahl aktuelle Variante</Text>
+      <TextId>3614</TextId>
+      <Value>0</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>SelectedSourceIndex</Name>
+      <Text>Originalindex des ausgewählten Gebäudes</Text>
+      <TextId>3615</TextId>
+      <Value>-1</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>GeometryValid</Name>
+      <Text>Geometrie erfüllt Baugrenze/Mindestabstand</Text>
+      <TextId>3616</TextId>
+      <Value>True</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>EditOverrides</Name>
+      <Text>EditOverrides</Text>
+      <TextId>3704</TextId>
+      <Value>{}</Value>
+      <ValueType>String</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>LoadedKey</Name>
+      <Text>LoadedKey</Text>
+      <TextId>3705</TextId>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>LoadedValues</Name>
+      <Text>LoadedValues</Text>
+      <TextId>3706</TextId>
+      <Value>[]</Value>
+      <ValueType>String</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateHandles</Name>
+      <Text>CreateHandles</Text>
+      <TextId>3574</TextId>
+      <Value>True</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>HeightOverrides</Name>
+      <Text>Höhenänderungen je Variante</Text>
+      <TextId>3575</TextId>
+      <Value>{}</Value>
+      <ValueType>String</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>LoadedHeight</Name>
+      <Text>Geladene Gebäudehöhe</Text>
+      <TextId>3576</TextId>
+      <Value>0</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>DeletedBuildings</Name>
+      <Text>Gelöschte Gebäude je Variante</Text>
+      <TextId>3582</TextId>
+      <Value>{}</Value>
+      <ValueType>String</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>DeleteLock</Name>
+      <Text>Schutz bei wiederholtem Klick</Text>
+      <TextId>3583</TextId>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+  </Page>
+</Element>

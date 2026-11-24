@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element><StringTable text="PaletteValueDisplay" /><Node Name="NodePaletteValueDisplay"><Item><TextId>62001</TextId><Text>Display value as text</Text><Description /><Note /><Bitmap /></Item><Item><TextId>62002</TextId><Text>Input value</Text><Description /><Note /><Bitmap /></Item><Item><TextId>62003</TextId><Text>Display format</Text><Description /><Note /><Bitmap /></Item></Node></Element>

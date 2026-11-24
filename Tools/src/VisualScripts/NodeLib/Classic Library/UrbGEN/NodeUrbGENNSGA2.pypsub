@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENNSGA2.py</Name>
+    <Uuid>67384da0-51fd-57fa-8858-7bd1c66d5541</Uuid>
+    <Title>UrbGEN NSGA2</Title>
+    <TextId>3700</TextId>
+    <Version>0.7</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>Boundary</Name>
+      <Text>Boundary</Text>
+      <TextId>3701</TextId>
+      <Value />
+      <ValueType>Polygon3D</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>X</Name>
+      <Text>X</Text>
+      <TextId>3702</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Y</Name>
+      <Text>Y</Text>
+      <TextId>3703</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Z</Name>
+      <Text>Z</Text>
+      <TextId>3704</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Lengths</Name>
+      <Text>Lengths</Text>
+      <TextId>3705</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Widths</Name>
+      <Text>Widths</Text>
+      <TextId>3706</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>AnglesDeg</Name>
+      <Text>AnglesDeg</Text>
+      <TextId>3707</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Floors</Name>
+      <Text>Floors</Text>
+      <TextId>3708</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TypologyCodes</Name>
+      <Text>TypologyCodes</Text>
+      <TextId>3709</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>NetGroundAreaM2</Name>
+      <Text>NetGroundAreaM2</Text>
+      <TextId>3710</TextId>
+      <Value>10000</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TargetBFZ</Name>
+      <Text>TargetBFZ</Text>
+      <TextId>3711</TextId>
+      <Value>25</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TargetBNZ</Name>
+      <Text>TargetBNZ</Text>
+      <TextId>3712</TextId>
+      <Value>100</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>GGFFactor</Name>
+      <Text>GGFFactor</Text>
+      <TextId>3713</TextId>
+      <Value>1</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ArmLengthRatio</Name>
+      <Text>ArmLengthRatio</Text>
+      <TextId>3714</TextId>
+      <Value>1.3</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MinDistance</Name>
+      <Text>MinDistance</Text>
+      <TextId>3715</TextId>
+      <Value>5000</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MinFloors</Name>
+      <Text>MinFloors</Text>
+      <TextId>3716</TextId>
+      <Value>2</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MaxFloors</Name>
+      <Text>MaxFloors</Text>
+      <TextId>3717</TextId>
+      <Value>6</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Population</Name>
+      <Text>Population</Text>
+      <TextId>3718</TextId>
+      <Value>8</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Generations</Name>
+      <Text>Generations</Text>
+      <TextId>3719</TextId>
+      <Value>4</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MutationStep</Name>
+      <Text>MutationStep</Text>
+      <TextId>3720</TextId>
+      <Value>500</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Seed</Name>
+      <Text>Seed</Text>
+      <TextId>3721</TextId>
+      <Value>42</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>OutX</Name>
+      <Text>OutX</Text>
+      <TextId>3800</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutY</Name>
+      <Text>OutY</Text>
+      <TextId>3801</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutZ</Name>
+      <Text>OutZ</Text>
+      <TextId>3802</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutLengths</Name>
+      <Text>OutLengths</Text>
+      <TextId>3803</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutWidths</Name>
+      <Text>OutWidths</Text>
+      <TextId>3804</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutAnglesDeg</Name>
+      <Text>OutAnglesDeg</Text>
+      <TextId>3805</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutFloors</Name>
+      <Text>OutFloors</Text>
+      <TextId>3806</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutTypologyCodes</Name>
+      <Text>OutTypologyCodes</Text>
+      <TextId>3807</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ParetoBFZ</Name>
+      <Text>ParetoBFZ</Text>
+      <TextId>3808</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ParetoBNZ</Name>
+      <Text>ParetoBNZ</Text>
+      <TextId>3809</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ParetoAreasM2</Name>
+      <Text>ParetoAreasM2</Text>
+      <TextId>3810</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ParetoCount</Name>
+      <Text>ParetoCount</Text>
+      <TextId>3811</TextId>
+      <Value />
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>SelectedParetoIndex</Name>
+      <Text>SelectedParetoIndex</Text>
+      <TextId>3812</TextId>
+      <Value />
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IsValid</Name>
+      <Text>IsValid</Text>
+      <TextId>3813</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ErrorMessage</Name>
+      <Text>ErrorMessage</Text>
+      <TextId>3814</TextId>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

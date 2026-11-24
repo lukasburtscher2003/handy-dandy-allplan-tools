@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Element>
+    <LanguageFile>.\Iteration</LanguageFile>
+    <Script>
+        <Name>.\NodeUrbGENPairwise.py</Name>
+        <Uuid>93c4d7c2-54e7-47cd-a2f3-b68f793a1021</Uuid>
+        <Title>UrbGEN Pairwise</Title>
+        <TextId>1001</TextId>
+        <Version>1.0</Version>
+    </Script>
+    <Page>
+        <Name>__IN_MANDATORY__</Name>
+        <Parameter>
+            <Name>Objects</Name>
+            <Text>Objects</Text>
+            <TextId>1002</TextId>
+            <Value></Value>
+            <ValueType>list{}</ValueType>
+            <ListState>1</ListState>
+            <ListStateRange>1</ListStateRange>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>__OUT__</Name>
+        <Parameter><Name>ObjectsA</Name><Text>Objects A</Text><TextId>1003</TextId><Value></Value><ValueType>list{}</ValueType></Parameter>
+        <Parameter><Name>ObjectsB</Name><Text>Objects B</Text><TextId>1004</TextId><Value></Value><ValueType>list{}</ValueType></Parameter>
+        <Parameter><Name>IndexA</Name><Text>Index A</Text><TextId>1005</TextId><Value></Value><ValueType>list{Integer}</ValueType></Parameter>
+        <Parameter><Name>IndexB</Name><Text>Index B</Text><TextId>1006</TextId><Value></Value><ValueType>list{Integer}</ValueType></Parameter>
+    </Page>
+    <Page>
+        <Name>__HiddenPage__</Name>
+        <Parameter><Name>CreateModelObjects</Name><Value>False</Value><ValueType>CheckBox</ValueType></Parameter>
+        <Parameter><Name>CreateModelPreviewObjects</Name><Value>False</Value><ValueType>CheckBox</ValueType></Parameter>
+        <Parameter><Name>Executed</Name><Value>False</Value><ValueType>CheckBox</ValueType></Parameter>
+    </Page>
+</Element>

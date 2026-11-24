@@ -1,0 +1,1574 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <StringTable>UrbGEN Iteration</StringTable>
+  <Node Name="NodeUrbGENPairwise">
+    <Item>
+      <TextId>1001</TextId>
+      <Text>Erzeugt alle eindeutigen Gebäudepaare ohne Selbstvergleiche.</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>1002</TextId>
+      <Text>Liste der Gebäudegrundflächen</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>1003</TextId>
+      <Text>Erstes Objekt je Paar</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>1004</TextId>
+      <Text>Zweites Objekt je Paar</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>1005</TextId>
+      <Text>Ursprungsindex des ersten Objekts</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>1006</TextId>
+      <Text>Ursprungsindex des zweiten Objekts</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENCollisionCheck">
+    <Item>
+      <TextId>1101</TextId>
+      <Text>Checks every building pair for area overlap.</Text>
+    </Item>
+    <Item>
+      <TextId>1102</TextId>
+      <Text>First footprint for each pair</Text>
+    </Item>
+    <Item>
+      <TextId>1103</TextId>
+      <Text>Second footprint for each pair</Text>
+    </Item>
+    <Item>
+      <TextId>1104</TextId>
+      <Text>Area tolerance in m²</Text>
+    </Item>
+    <Item>
+      <TextId>1105</TextId>
+      <Text>Overlap areas in m²; no overlap = 0</Text>
+    </Item>
+    <Item>
+      <TextId>1106</TextId>
+      <Text>Collision flag per pair</Text>
+    </Item>
+    <Item>
+      <TextId>1107</TextId>
+      <Text>True if calculation was valid</Text>
+    </Item>
+    <Item>
+      <TextId>1108</TextId>
+      <Text>Error information per pair</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENCollisionResolver">
+    <Item>
+      <TextId>1200</TextId>
+      <Text>Resolve all pairwise collisions greedily in input order; invalid checks block output.</Text>
+    </Item>
+    <Item>
+      <TextId>1201</TextId>
+      <Text>Count – Number of buildings</Text>
+    </Item>
+    <Item>
+      <TextId>1202</TextId>
+      <Text>IndexA – Pair index A</Text>
+    </Item>
+    <Item>
+      <TextId>1203</TextId>
+      <Text>IndexB – Pair index B</Text>
+    </Item>
+    <Item>
+      <TextId>1204</TextId>
+      <Text>CollisionStates – Collision states</Text>
+    </Item>
+    <Item>
+      <TextId>1205</TextId>
+      <Text>ValidResults – Valid results</Text>
+    </Item>
+    <Item>
+      <TextId>1241</TextId>
+      <Text>KeepStates – Keep building</Text>
+    </Item>
+    <Item>
+      <TextId>1242</TextId>
+      <Text>RejectedBy – Rejected by index</Text>
+    </Item>
+    <Item>
+      <TextId>1243</TextId>
+      <Text>AcceptedIndices – Accepted indices</Text>
+    </Item>
+    <Item>
+      <TextId>1244</TextId>
+      <Text>IsValid – All inputs valid</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENSeededPoints">
+    <Item>
+      <TextId>1300</TextId>
+      <Text>Generate deterministic candidate XY coordinates inside a bounding rectangle; filter by native site containment before use.</Text>
+    </Item>
+    <Item>
+      <TextId>1301</TextId>
+      <Text>Count – Point count</Text>
+    </Item>
+    <Item>
+      <TextId>1302</TextId>
+      <Text>MinX – Minimum X [mm]</Text>
+    </Item>
+    <Item>
+      <TextId>1303</TextId>
+      <Text>MaxX – Maximum X [mm]</Text>
+    </Item>
+    <Item>
+      <TextId>1304</TextId>
+      <Text>MinY – Minimum Y [mm]</Text>
+    </Item>
+    <Item>
+      <TextId>1305</TextId>
+      <Text>MaxY – Maximum Y [mm]</Text>
+    </Item>
+    <Item>
+      <TextId>1306</TextId>
+      <Text>Z – Z [mm]</Text>
+    </Item>
+    <Item>
+      <TextId>1307</TextId>
+      <Text>Seed – Random seed</Text>
+    </Item>
+    <Item>
+      <TextId>1308</TextId>
+      <Text>MinDistance – Minimum spacing [mm]</Text>
+    </Item>
+    <Item>
+      <TextId>1309</TextId>
+      <Text>MaxAttempts – Maximum attempts</Text>
+    </Item>
+    <Item>
+      <TextId>1341</TextId>
+      <Text>X – X coordinates [mm]</Text>
+    </Item>
+    <Item>
+      <TextId>1342</TextId>
+      <Text>Y – Y coordinates [mm]</Text>
+    </Item>
+    <Item>
+      <TextId>1343</TextId>
+      <Text>ZValues – Z coordinates [mm]</Text>
+    </Item>
+    <Item>
+      <TextId>1344</TextId>
+      <Text>Generated – Generated count</Text>
+    </Item>
+    <Item>
+      <TextId>1345</TextId>
+      <Text>Complete – Requested count reached</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENTypologySampler">
+    <Item>
+      <TextId>1400</TextId>
+      <Text>Select building typology IDs reproducibly from seven user-specified weights.</Text>
+    </Item>
+    <Item>
+      <TextId>1401</TextId>
+      <Text>Count – Number of buildings</Text>
+    </Item>
+    <Item>
+      <TextId>1402</TextId>
+      <Text>Weights – Weights I L T H U Cross Courtyard</Text>
+    </Item>
+    <Item>
+      <TextId>1403</TextId>
+      <Text>Seed – Random seed</Text>
+    </Item>
+    <Item>
+      <TextId>1441</TextId>
+      <Text>TypologyIds – Typology IDs [0..6]</Text>
+    </Item>
+    <Item>
+      <TextId>1442</TextId>
+      <Text>TypologyNames – Typology names</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENVariantSeeds">
+    <Item>
+      <TextId>1500</TextId>
+      <Text>Produce reproducible deterministic seeds for alternative site schemes.</Text>
+    </Item>
+    <Item>
+      <TextId>1501</TextId>
+      <Text>BaseSeed – Base seed</Text>
+    </Item>
+    <Item>
+      <TextId>1502</TextId>
+      <Text>Count – Number of variants</Text>
+    </Item>
+    <Item>
+      <TextId>1503</TextId>
+      <Text>Stride – Seed increment</Text>
+    </Item>
+    <Item>
+      <TextId>1541</TextId>
+      <Text>Seeds – Variant seed list</Text>
+    </Item>
+    <Item>
+      <TextId>1542</TextId>
+      <Text>Indices – Variant indices</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENBoundaryCheck">
+    <Item>
+      <TextId>1600</TextId>
+      <Text>Check each footprint against the buildable boundary while preserving list order.</Text>
+    </Item>
+    <Item>
+      <TextId>1601</TextId>
+      <Text>Building footprint list</Text>
+    </Item>
+    <Item>
+      <TextId>1602</TextId>
+      <Text>Buildable boundary polygon</Text>
+    </Item>
+    <Item>
+      <TextId>1603</TextId>
+      <Text>Area tolerance [m²]</Text>
+    </Item>
+    <Item>
+      <TextId>1604</TextId>
+      <Text>True = completely inside</Text>
+    </Item>
+    <Item>
+      <TextId>1605</TextId>
+      <Text>Outside area per building [m²]</Text>
+    </Item>
+    <Item>
+      <TextId>1606</TextId>
+      <Text>True = geometry check succeeded</Text>
+    </Item>
+    <Item>
+      <TextId>1607</TextId>
+      <Text>Error per building</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENBoundaryAlign">
+    <Item>
+      <TextId>1700</TextId>
+      <Text>Align building long axis parallel to nearest site edge.</Text>
+    </Item>
+    <Item>
+      <TextId>1701</TextId>
+      <Text>Single Polygon3D site boundary</Text>
+    </Item>
+    <Item>
+      <TextId>1702</TextId>
+      <Text>List of building placement points</Text>
+    </Item>
+    <Item>
+      <TextId>1703</TextId>
+      <Text>Additional angle offset in degrees</Text>
+    </Item>
+    <Item>
+      <TextId>1704</TextId>
+      <Text>One angle in degrees per placement point</Text>
+    </Item>
+    <Item>
+      <TextId>1705</TextId>
+      <Text>Index of nearest polygon edge (zero-based)</Text>
+    </Item>
+    <Item>
+      <TextId>1706</TextId>
+      <Text>Distance to nearest edge in model units</Text>
+    </Item>
+    <Item>
+      <TextId>1707</TextId>
+      <Text>Calculation succeeded per placement point</Text>
+    </Item>
+    <Item>
+      <TextId>1708</TextId>
+      <Text>Error message per placement point</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENVariantSelector">
+    <Item>
+      <TextId>1900</TextId>
+      <Text>Generate reproducible collision-free variants from a validated candidate pool.</Text>
+    </Item>
+    <Item>
+      <TextId>1901</TextId>
+      <Text>CandidateCount: Number of candidate buildings</Text>
+    </Item>
+    <Item>
+      <TextId>1902</TextId>
+      <Text>InsideStates: Boundary: inside mask</Text>
+    </Item>
+    <Item>
+      <TextId>1903</TextId>
+      <Text>BoundaryValid: Boundary: valid geometry</Text>
+    </Item>
+    <Item>
+      <TextId>1904</TextId>
+      <Text>IndexA: Pair index A</Text>
+    </Item>
+    <Item>
+      <TextId>1905</TextId>
+      <Text>IndexB: Pair index B</Text>
+    </Item>
+    <Item>
+      <TextId>1906</TextId>
+      <Text>CollisionStates: Collision per pair</Text>
+    </Item>
+    <Item>
+      <TextId>1907</TextId>
+      <Text>CollisionValid: Collision: valid geometry</Text>
+    </Item>
+    <Item>
+      <TextId>1908</TextId>
+      <Text>TargetCount: Requested buildings per variant</Text>
+    </Item>
+    <Item>
+      <TextId>1909</TextId>
+      <Text>VariantCount: Number of variants</Text>
+    </Item>
+    <Item>
+      <TextId>1910</TextId>
+      <Text>BaseSeed: Variant base seed</Text>
+    </Item>
+    <Item>
+      <TextId>1911</TextId>
+      <Text>SelectedVariant: Selected variant (zero based)</Text>
+    </Item>
+    <Item>
+      <TextId>1940</TextId>
+      <Text>KeepStates: Keep state per candidate</Text>
+    </Item>
+    <Item>
+      <TextId>1941</TextId>
+      <Text>SelectedIndices: Indices in selected variant</Text>
+    </Item>
+    <Item>
+      <TextId>1942</TextId>
+      <Text>VariantCounts: Accepted count per variant</Text>
+    </Item>
+    <Item>
+      <TextId>1943</TextId>
+      <Text>VariantComplete: Target reached per variant</Text>
+    </Item>
+    <Item>
+      <TextId>1944</TextId>
+      <Text>VariantSeeds: Seed per variant</Text>
+    </Item>
+    <Item>
+      <TextId>1945</TextId>
+      <Text>SelectedCount: Selected accepted count</Text>
+    </Item>
+    <Item>
+      <TextId>1946</TextId>
+      <Text>IsValid: Checks valid</Text>
+    </Item>
+    <Item>
+      <TextId>1947</TextId>
+      <Text>ErrorMessage: Error information</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENIterativePlacement">
+    <Item>
+      <TextId>2100</TextId>
+      <Text>Iteratively place rectangular buildings inside buildable boundary</Text>
+    </Item>
+    <Item>
+      <TextId>2101</TextId>
+      <Text>Buildable boundary Polygon3D</Text>
+    </Item>
+    <Item>
+      <TextId>2102</TextId>
+      <Text>Requested buildings</Text>
+    </Item>
+    <Item>
+      <TextId>2103</TextId>
+      <Text>Minimum building length (model units)</Text>
+    </Item>
+    <Item>
+      <TextId>2104</TextId>
+      <Text>Maximum building length (model units)</Text>
+    </Item>
+    <Item>
+      <TextId>2105</TextId>
+      <Text>Minimum building width (model units)</Text>
+    </Item>
+    <Item>
+      <TextId>2106</TextId>
+      <Text>Maximum building width (model units)</Text>
+    </Item>
+    <Item>
+      <TextId>2107</TextId>
+      <Text>Minimum outline clearance (model units)</Text>
+    </Item>
+    <Item>
+      <TextId>2108</TextId>
+      <Text>Maximum trials per variant</Text>
+    </Item>
+    <Item>
+      <TextId>2109</TextId>
+      <Text>Number of independent variants</Text>
+    </Item>
+    <Item>
+      <TextId>2110</TextId>
+      <Text>First random seed</Text>
+    </Item>
+    <Item>
+      <TextId>2111</TextId>
+      <Text>Selected variant index (0-based)</Text>
+    </Item>
+    <Item>
+      <TextId>2112</TextId>
+      <Text>0 fixed, 1 random, 2 site-edge aligned</Text>
+    </Item>
+    <Item>
+      <TextId>2113</TextId>
+      <Text>Fixed angle / site-edge offset (degrees)</Text>
+    </Item>
+    <Item>
+      <TextId>2114</TextId>
+      <Text>Minimum floors</Text>
+    </Item>
+    <Item>
+      <TextId>2115</TextId>
+      <Text>Maximum floors</Text>
+    </Item>
+    <Item>
+      <TextId>2116</TextId>
+      <Text>Floor height (model units)</Text>
+    </Item>
+    <Item>
+      <TextId>2140</TextId>
+      <Text>X coordinates</Text>
+    </Item>
+    <Item>
+      <TextId>2141</TextId>
+      <Text>Y coordinates</Text>
+    </Item>
+    <Item>
+      <TextId>2142</TextId>
+      <Text>Z coordinates</Text>
+    </Item>
+    <Item>
+      <TextId>2143</TextId>
+      <Text>Individual building lengths</Text>
+    </Item>
+    <Item>
+      <TextId>2144</TextId>
+      <Text>Individual building widths</Text>
+    </Item>
+    <Item>
+      <TextId>2145</TextId>
+      <Text>Angles in degrees</Text>
+    </Item>
+    <Item>
+      <TextId>2146</TextId>
+      <Text>Floor counts</Text>
+    </Item>
+    <Item>
+      <TextId>2147</TextId>
+      <Text>Extrusion heights</Text>
+    </Item>
+    <Item>
+      <TextId>2148</TextId>
+      <Text>Placed buildings per variant</Text>
+    </Item>
+    <Item>
+      <TextId>2149</TextId>
+      <Text>Target reached per variant</Text>
+    </Item>
+    <Item>
+      <TextId>2150</TextId>
+      <Text>Attempt counts per variant</Text>
+    </Item>
+    <Item>
+      <TextId>2151</TextId>
+      <Text>Reproducible variant seeds</Text>
+    </Item>
+    <Item>
+      <TextId>2152</TextId>
+      <Text>Placed buildings in selected variant</Text>
+    </Item>
+    <Item>
+      <TextId>2153</TextId>
+      <Text>Selected target reached</Text>
+    </Item>
+    <Item>
+      <TextId>2154</TextId>
+      <Text>Inputs and computation valid</Text>
+    </Item>
+    <Item>
+      <TextId>2155</TextId>
+      <Text>Error information</Text>
+    </Item>
+    <Item>
+      <TextId>2117</TextId>
+      <Text>Target BFZ (0=off, e.g. 30)</Text>
+    </Item>
+    <Item>
+      <TextId>2118</TextId>
+      <Text>Target BNZ (0=off, e.g. 120)</Text>
+    </Item>
+    <Item>
+      <TextId>2119</TextId>
+      <Text>Independent attempts per variant (1-12)</Text>
+    </Item>
+    <Item>
+      <TextId>2156</TextId>
+      <Text>Estimated BFZ per variant (percentage index)</Text>
+    </Item>
+    <Item>
+      <TextId>2157</TextId>
+      <Text>Estimated BNZ per variant (percentage index)</Text>
+    </Item>
+    <Item>
+      <TextId>2158</TextId>
+      <Text>Absolute BFZ error (percentage points)</Text>
+    </Item>
+    <Item>
+      <TextId>2159</TextId>
+      <Text>Absolute BNZ error (percentage points)</Text>
+    </Item>
+    <Item>
+      <TextId>2160</TextId>
+      <Text>Relative density target deviation plus count penalty</Text>
+    </Item>
+    <Item>
+      <TextId>2161</TextId>
+      <Text>Buildable polygon area in m²</Text>
+    </Item>
+    <Item>
+      <TextId>2120</TextId>
+      <Text>Net parcel area NGF in m² (required for BFZ/BNZ)</Text>
+    </Item>
+    <Item>
+      <TextId>2162</TextId>
+      <Text>Reference net parcel area NGF in m²</Text>
+    </Item>
+    <Item>
+      <TextId>2121</TextId>
+      <Text>Eligible floor area approximation factor (0–1)</Text>
+    </Item>
+    <Item>
+      <TextId>2171</TextId>
+      <Text>Armlängen-Verhältnis</Text>
+    </Item>
+    <Item>
+      <TextId>2172</TextId>
+      <Text>Typologiecode pro Gebäude</Text>
+    </Item>
+    <Item>
+      <TextId>2190</TextId>
+      <Text>0 = fast preview (selected variant, one trial); 1 = all variants and optimization trials</Text>
+    </Item>
+    <Item>
+      <TextId>2200</TextId>
+      <Text>I / Rectangle</Text>
+    </Item>
+    <Item>
+      <TextId>2201</TextId>
+      <Text>L Shape</Text>
+    </Item>
+    <Item>
+      <TextId>2202</TextId>
+      <Text>T Shape</Text>
+    </Item>
+    <Item>
+      <TextId>2203</TextId>
+      <Text>H Shape</Text>
+    </Item>
+    <Item>
+      <TextId>2204</TextId>
+      <Text>C / U Shape</Text>
+    </Item>
+    <Item>
+      <TextId>2205</TextId>
+      <Text>Plus / Cross</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENTypologyFootprints">
+    <Item>
+      <TextId>3000</TextId>
+      <Text>Erzeugt Gebäudekonturen aus Standort, Größe und Typologie</Text>
+    </Item>
+    <Item>
+      <TextId>3001</TextId>
+      <Text>X-Koordinaten</Text>
+    </Item>
+    <Item>
+      <TextId>3002</TextId>
+      <Text>Y-Koordinaten</Text>
+    </Item>
+    <Item>
+      <TextId>3003</TextId>
+      <Text>Z-Koordinaten</Text>
+    </Item>
+    <Item>
+      <TextId>3004</TextId>
+      <Text>Längen</Text>
+    </Item>
+    <Item>
+      <TextId>3005</TextId>
+      <Text>Breiten</Text>
+    </Item>
+    <Item>
+      <TextId>3006</TextId>
+      <Text>Rotationswinkel</Text>
+    </Item>
+    <Item>
+      <TextId>3007</TextId>
+      <Text>Typologiecodes</Text>
+    </Item>
+    <Item>
+      <TextId>3008</TextId>
+      <Text>Armlängenfaktor</Text>
+    </Item>
+    <Item>
+      <TextId>3041</TextId>
+      <Text>Grundrisse</Text>
+    </Item>
+    <Item>
+      <TextId>3042</TextId>
+      <Text>Grundflächen m²</Text>
+    </Item>
+    <Item>
+      <TextId>3043</TextId>
+      <Text>Typologien</Text>
+    </Item>
+    <Item>
+      <TextId>3044</TextId>
+      <Text>Hof-Indizes</Text>
+    </Item>
+    <Item>
+      <TextId>3045</TextId>
+      <Text>Hof Außen</Text>
+    </Item>
+    <Item>
+      <TextId>3046</TextId>
+      <Text>Hof Innen</Text>
+    </Item>
+    <Item>
+      <TextId>3047</TextId>
+      <Text>Gültig</Text>
+    </Item>
+    <Item>
+      <TextId>3048</TextId>
+      <Text>Fehler</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENLevelSchedule">
+    <Item>
+      <TextId>3200</TextId>
+      <Text>Erzeugt Geschossdaten zur nativen Modellierung</Text>
+    </Item>
+    <Item>
+      <TextId>3201</TextId>
+      <Text>X-Koordinaten</Text>
+    </Item>
+    <Item>
+      <TextId>3202</TextId>
+      <Text>Y-Koordinaten</Text>
+    </Item>
+    <Item>
+      <TextId>3203</TextId>
+      <Text>Z-Koordinaten</Text>
+    </Item>
+    <Item>
+      <TextId>3204</TextId>
+      <Text>Längen</Text>
+    </Item>
+    <Item>
+      <TextId>3205</TextId>
+      <Text>Breiten</Text>
+    </Item>
+    <Item>
+      <TextId>3206</TextId>
+      <Text>Rotationswinkel</Text>
+    </Item>
+    <Item>
+      <TextId>3207</TextId>
+      <Text>Geschossanzahlen</Text>
+    </Item>
+    <Item>
+      <TextId>3208</TextId>
+      <Text>Typologiecodes</Text>
+    </Item>
+    <Item>
+      <TextId>3209</TextId>
+      <Text>Geschosshöhe</Text>
+    </Item>
+    <Item>
+      <TextId>3210</TextId>
+      <Text>Sockelgeschosse</Text>
+    </Item>
+    <Item>
+      <TextId>3241</TextId>
+      <Text>Gebäudeindex</Text>
+    </Item>
+    <Item>
+      <TextId>3242</TextId>
+      <Text>Geschossindex</Text>
+    </Item>
+    <Item>
+      <TextId>3243</TextId>
+      <Text>X</Text>
+    </Item>
+    <Item>
+      <TextId>3244</TextId>
+      <Text>Y</Text>
+    </Item>
+    <Item>
+      <TextId>3245</TextId>
+      <Text>Z</Text>
+    </Item>
+    <Item>
+      <TextId>3246</TextId>
+      <Text>Längen</Text>
+    </Item>
+    <Item>
+      <TextId>3247</TextId>
+      <Text>Breiten</Text>
+    </Item>
+    <Item>
+      <TextId>3248</TextId>
+      <Text>Winkel</Text>
+    </Item>
+    <Item>
+      <TextId>3249</TextId>
+      <Text>Geschosshöhen</Text>
+    </Item>
+    <Item>
+      <TextId>3250</TextId>
+      <Text>Typologie</Text>
+    </Item>
+    <Item>
+      <TextId>3251</TextId>
+      <Text>Sockel</Text>
+    </Item>
+    <Item>
+      <TextId>3252</TextId>
+      <Text>Gültig</Text>
+    </Item>
+    <Item>
+      <TextId>3253</TextId>
+      <Text>Fehler</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENPodiumTower">
+    <Item>
+      <TextId>3300</TextId>
+      <Text>UrbGEN PodiumTower</Text>
+    </Item>
+    <Item>
+      <TextId>3301</TextId>
+      <Text>X</Text>
+    </Item>
+    <Item>
+      <TextId>3302</TextId>
+      <Text>Y</Text>
+    </Item>
+    <Item>
+      <TextId>3303</TextId>
+      <Text>Z</Text>
+    </Item>
+    <Item>
+      <TextId>3304</TextId>
+      <Text>Lengths</Text>
+    </Item>
+    <Item>
+      <TextId>3305</TextId>
+      <Text>Widths</Text>
+    </Item>
+    <Item>
+      <TextId>3306</TextId>
+      <Text>AnglesDeg</Text>
+    </Item>
+    <Item>
+      <TextId>3307</TextId>
+      <Text>Floors</Text>
+    </Item>
+    <Item>
+      <TextId>3308</TextId>
+      <Text>TypologyCodes</Text>
+    </Item>
+    <Item>
+      <TextId>3309</TextId>
+      <Text>PodiumFloors</Text>
+    </Item>
+    <Item>
+      <TextId>3310</TextId>
+      <Text>PodiumScale</Text>
+    </Item>
+    <Item>
+      <TextId>3311</TextId>
+      <Text>FloorHeight</Text>
+    </Item>
+    <Item>
+      <TextId>3312</TextId>
+      <Text>ArmLengthRatio</Text>
+    </Item>
+    <Item>
+      <TextId>3400</TextId>
+      <Text>PodiumX</Text>
+    </Item>
+    <Item>
+      <TextId>3401</TextId>
+      <Text>PodiumY</Text>
+    </Item>
+    <Item>
+      <TextId>3402</TextId>
+      <Text>PodiumZ</Text>
+    </Item>
+    <Item>
+      <TextId>3403</TextId>
+      <Text>PodiumLengths</Text>
+    </Item>
+    <Item>
+      <TextId>3404</TextId>
+      <Text>PodiumWidths</Text>
+    </Item>
+    <Item>
+      <TextId>3405</TextId>
+      <Text>PodiumAnglesDeg</Text>
+    </Item>
+    <Item>
+      <TextId>3406</TextId>
+      <Text>PodiumTypologyCodes</Text>
+    </Item>
+    <Item>
+      <TextId>3407</TextId>
+      <Text>PodiumHeights</Text>
+    </Item>
+    <Item>
+      <TextId>3408</TextId>
+      <Text>TowerX</Text>
+    </Item>
+    <Item>
+      <TextId>3409</TextId>
+      <Text>TowerY</Text>
+    </Item>
+    <Item>
+      <TextId>3410</TextId>
+      <Text>TowerZ</Text>
+    </Item>
+    <Item>
+      <TextId>3411</TextId>
+      <Text>TowerLengths</Text>
+    </Item>
+    <Item>
+      <TextId>3412</TextId>
+      <Text>TowerWidths</Text>
+    </Item>
+    <Item>
+      <TextId>3413</TextId>
+      <Text>TowerAnglesDeg</Text>
+    </Item>
+    <Item>
+      <TextId>3414</TextId>
+      <Text>TowerTypologyCodes</Text>
+    </Item>
+    <Item>
+      <TextId>3415</TextId>
+      <Text>TowerHeights</Text>
+    </Item>
+    <Item>
+      <TextId>3416</TextId>
+      <Text>TowerFloors</Text>
+    </Item>
+    <Item>
+      <TextId>3417</TextId>
+      <Text>PodiumAreasM2</Text>
+    </Item>
+    <Item>
+      <TextId>3418</TextId>
+      <Text>TowerAreasM2</Text>
+    </Item>
+    <Item>
+      <TextId>3419</TextId>
+      <Text>IsValid</Text>
+    </Item>
+    <Item>
+      <TextId>3420</TextId>
+      <Text>ErrorMessage</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENSetbackAudit">
+    <Item>
+      <TextId>3400</TextId>
+      <Text>UrbGEN SetbackAudit</Text>
+    </Item>
+    <Item>
+      <TextId>3401</TextId>
+      <Text>Boundary</Text>
+    </Item>
+    <Item>
+      <TextId>3402</TextId>
+      <Text>X</Text>
+    </Item>
+    <Item>
+      <TextId>3403</TextId>
+      <Text>Y</Text>
+    </Item>
+    <Item>
+      <TextId>3404</TextId>
+      <Text>Z</Text>
+    </Item>
+    <Item>
+      <TextId>3405</TextId>
+      <Text>Lengths</Text>
+    </Item>
+    <Item>
+      <TextId>3406</TextId>
+      <Text>Widths</Text>
+    </Item>
+    <Item>
+      <TextId>3407</TextId>
+      <Text>AnglesDeg</Text>
+    </Item>
+    <Item>
+      <TextId>3408</TextId>
+      <Text>Floors</Text>
+    </Item>
+    <Item>
+      <TextId>3409</TextId>
+      <Text>TypologyCodes</Text>
+    </Item>
+    <Item>
+      <TextId>3410</TextId>
+      <Text>FloorHeight</Text>
+    </Item>
+    <Item>
+      <TextId>3411</TextId>
+      <Text>SetbackHeightRatio</Text>
+    </Item>
+    <Item>
+      <TextId>3412</TextId>
+      <Text>MinimumSetback</Text>
+    </Item>
+    <Item>
+      <TextId>3413</TextId>
+      <Text>ArmLengthRatio</Text>
+    </Item>
+    <Item>
+      <TextId>3500</TextId>
+      <Text>BoundaryDistances</Text>
+    </Item>
+    <Item>
+      <TextId>3501</TextId>
+      <Text>RequiredDistances</Text>
+    </Item>
+    <Item>
+      <TextId>3502</TextId>
+      <Text>PairDistances</Text>
+    </Item>
+    <Item>
+      <TextId>3503</TextId>
+      <Text>PairIndexA</Text>
+    </Item>
+    <Item>
+      <TextId>3504</TextId>
+      <Text>PairIndexB</Text>
+    </Item>
+    <Item>
+      <TextId>3505</TextId>
+      <Text>BuildingPass</Text>
+    </Item>
+    <Item>
+      <TextId>3506</TextId>
+      <Text>AllPass</Text>
+    </Item>
+    <Item>
+      <TextId>3507</TextId>
+      <Text>IsValid</Text>
+    </Item>
+    <Item>
+      <TextId>3508</TextId>
+      <Text>ErrorMessage</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENEditBuilding">
+    <Item>
+      <TextId>3500</TextId>
+      <Text>UrbGEN EditBuilding</Text>
+    </Item>
+    <Item>
+      <TextId>3501</TextId>
+      <Text>Boundary</Text>
+    </Item>
+    <Item>
+      <TextId>3502</TextId>
+      <Text>X</Text>
+    </Item>
+    <Item>
+      <TextId>3503</TextId>
+      <Text>Y</Text>
+    </Item>
+    <Item>
+      <TextId>3504</TextId>
+      <Text>Z</Text>
+    </Item>
+    <Item>
+      <TextId>3505</TextId>
+      <Text>Lengths</Text>
+    </Item>
+    <Item>
+      <TextId>3506</TextId>
+      <Text>Widths</Text>
+    </Item>
+    <Item>
+      <TextId>3507</TextId>
+      <Text>AnglesDeg</Text>
+    </Item>
+    <Item>
+      <TextId>3508</TextId>
+      <Text>Floors</Text>
+    </Item>
+    <Item>
+      <TextId>3509</TextId>
+      <Text>TypologyCodes</Text>
+    </Item>
+    <Item>
+      <TextId>3510</TextId>
+      <Text>BuildingIndex</Text>
+    </Item>
+    <Item>
+      <TextId>3511</TextId>
+      <Text>DeltaX</Text>
+    </Item>
+    <Item>
+      <TextId>3512</TextId>
+      <Text>DeltaY</Text>
+    </Item>
+    <Item>
+      <TextId>3513</TextId>
+      <Text>DeltaLength</Text>
+    </Item>
+    <Item>
+      <TextId>3514</TextId>
+      <Text>DeltaWidth</Text>
+    </Item>
+    <Item>
+      <TextId>3515</TextId>
+      <Text>DeltaAngleDeg</Text>
+    </Item>
+    <Item>
+      <TextId>3516</TextId>
+      <Text>DeltaFloors</Text>
+    </Item>
+    <Item>
+      <TextId>3517</TextId>
+      <Text>MinDistance</Text>
+    </Item>
+    <Item>
+      <TextId>3518</TextId>
+      <Text>ArmLengthRatio</Text>
+    </Item>
+    <Item>
+      <TextId>3600</TextId>
+      <Text>OutX</Text>
+    </Item>
+    <Item>
+      <TextId>3601</TextId>
+      <Text>OutY</Text>
+    </Item>
+    <Item>
+      <TextId>3602</TextId>
+      <Text>OutZ</Text>
+    </Item>
+    <Item>
+      <TextId>3603</TextId>
+      <Text>OutLengths</Text>
+    </Item>
+    <Item>
+      <TextId>3604</TextId>
+      <Text>OutWidths</Text>
+    </Item>
+    <Item>
+      <TextId>3605</TextId>
+      <Text>OutAnglesDeg</Text>
+    </Item>
+    <Item>
+      <TextId>3606</TextId>
+      <Text>OutFloors</Text>
+    </Item>
+    <Item>
+      <TextId>3607</TextId>
+      <Text>OutTypologyCodes</Text>
+    </Item>
+    <Item>
+      <TextId>3608</TextId>
+      <Text>EditAccepted</Text>
+    </Item>
+    <Item>
+      <TextId>3609</TextId>
+      <Text>IsValid</Text>
+    </Item>
+    <Item>
+      <TextId>3610</TextId>
+      <Text>ErrorMessage</Text>
+    </Item>
+    <Item>
+      <TextId>3520</TextId>
+      <Text>Variant index</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3521</TextId>
+      <Text>X position</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3522</TextId>
+      <Text>Y position</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3523</TextId>
+      <Text>Length</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3524</TextId>
+      <Text>Width</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3525</TextId>
+      <Text>Rotation (degrees)</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3526</TextId>
+      <Text>Floors</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3527</TextId>
+      <Text>Building shape (0–5, 7)</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3611</TextId>
+      <Text>Selected building</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3612</TextId>
+      <Text>Selected variant</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3520</TextId>
+      <Text>Variant index</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3521</TextId>
+      <Text>X position</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3522</TextId>
+      <Text>Y position</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3523</TextId>
+      <Text>Length</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3524</TextId>
+      <Text>Width</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3525</TextId>
+      <Text>Rotation (degrees)</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3526</TextId>
+      <Text>Floors</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3527</TextId>
+      <Text>Building shape (0–5, 7)</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3611</TextId>
+      <Text>Selected building</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+    <Item>
+      <TextId>3612</TextId>
+      <Text>Selected variant</Text>
+      <Description />
+      <Note />
+      <Bitmap />
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENVariantReport">
+    <Item>
+      <TextId>3600</TextId>
+      <Text>UrbGEN VariantReport</Text>
+    </Item>
+    <Item>
+      <TextId>3601</TextId>
+      <Text>Boundary</Text>
+    </Item>
+    <Item>
+      <TextId>3602</TextId>
+      <Text>X</Text>
+    </Item>
+    <Item>
+      <TextId>3603</TextId>
+      <Text>Y</Text>
+    </Item>
+    <Item>
+      <TextId>3604</TextId>
+      <Text>Z</Text>
+    </Item>
+    <Item>
+      <TextId>3605</TextId>
+      <Text>Lengths</Text>
+    </Item>
+    <Item>
+      <TextId>3606</TextId>
+      <Text>Widths</Text>
+    </Item>
+    <Item>
+      <TextId>3607</TextId>
+      <Text>AnglesDeg</Text>
+    </Item>
+    <Item>
+      <TextId>3608</TextId>
+      <Text>Floors</Text>
+    </Item>
+    <Item>
+      <TextId>3609</TextId>
+      <Text>TypologyCodes</Text>
+    </Item>
+    <Item>
+      <TextId>3610</TextId>
+      <Text>NetGroundAreaM2</Text>
+    </Item>
+    <Item>
+      <TextId>3611</TextId>
+      <Text>GGFFactor</Text>
+    </Item>
+    <Item>
+      <TextId>3612</TextId>
+      <Text>ArmLengthRatio</Text>
+    </Item>
+    <Item>
+      <TextId>3613</TextId>
+      <Text>MinDistance</Text>
+    </Item>
+    <Item>
+      <TextId>3700</TextId>
+      <Text>BFZ</Text>
+    </Item>
+    <Item>
+      <TextId>3701</TextId>
+      <Text>BNZ</Text>
+    </Item>
+    <Item>
+      <TextId>3702</TextId>
+      <Text>CoveredAreaM2</Text>
+    </Item>
+    <Item>
+      <TextId>3703</TextId>
+      <Text>GrossFloorAreaM2</Text>
+    </Item>
+    <Item>
+      <TextId>3704</TextId>
+      <Text>OpenAreaM2</Text>
+    </Item>
+    <Item>
+      <TextId>3705</TextId>
+      <Text>BuildingAreasM2</Text>
+    </Item>
+    <Item>
+      <TextId>3706</TextId>
+      <Text>BuildingCount</Text>
+    </Item>
+    <Item>
+      <TextId>3707</TextId>
+      <Text>GeometryValid</Text>
+    </Item>
+    <Item>
+      <TextId>3708</TextId>
+      <Text>IsValid</Text>
+    </Item>
+    <Item>
+      <TextId>3709</TextId>
+      <Text>ErrorMessage</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENNSGA2">
+    <Item>
+      <TextId>3700</TextId>
+      <Text>UrbGEN NSGA2</Text>
+    </Item>
+    <Item>
+      <TextId>3701</TextId>
+      <Text>Boundary</Text>
+    </Item>
+    <Item>
+      <TextId>3702</TextId>
+      <Text>X</Text>
+    </Item>
+    <Item>
+      <TextId>3703</TextId>
+      <Text>Y</Text>
+    </Item>
+    <Item>
+      <TextId>3704</TextId>
+      <Text>Z</Text>
+    </Item>
+    <Item>
+      <TextId>3705</TextId>
+      <Text>Lengths</Text>
+    </Item>
+    <Item>
+      <TextId>3706</TextId>
+      <Text>Widths</Text>
+    </Item>
+    <Item>
+      <TextId>3707</TextId>
+      <Text>AnglesDeg</Text>
+    </Item>
+    <Item>
+      <TextId>3708</TextId>
+      <Text>Floors</Text>
+    </Item>
+    <Item>
+      <TextId>3709</TextId>
+      <Text>TypologyCodes</Text>
+    </Item>
+    <Item>
+      <TextId>3710</TextId>
+      <Text>NetGroundAreaM2</Text>
+    </Item>
+    <Item>
+      <TextId>3711</TextId>
+      <Text>TargetBFZ</Text>
+    </Item>
+    <Item>
+      <TextId>3712</TextId>
+      <Text>TargetBNZ</Text>
+    </Item>
+    <Item>
+      <TextId>3713</TextId>
+      <Text>GGFFactor</Text>
+    </Item>
+    <Item>
+      <TextId>3714</TextId>
+      <Text>ArmLengthRatio</Text>
+    </Item>
+    <Item>
+      <TextId>3715</TextId>
+      <Text>MinDistance</Text>
+    </Item>
+    <Item>
+      <TextId>3716</TextId>
+      <Text>MinFloors</Text>
+    </Item>
+    <Item>
+      <TextId>3717</TextId>
+      <Text>MaxFloors</Text>
+    </Item>
+    <Item>
+      <TextId>3718</TextId>
+      <Text>Population</Text>
+    </Item>
+    <Item>
+      <TextId>3719</TextId>
+      <Text>Generations</Text>
+    </Item>
+    <Item>
+      <TextId>3720</TextId>
+      <Text>MutationStep</Text>
+    </Item>
+    <Item>
+      <TextId>3721</TextId>
+      <Text>Seed</Text>
+    </Item>
+    <Item>
+      <TextId>3800</TextId>
+      <Text>OutX</Text>
+    </Item>
+    <Item>
+      <TextId>3801</TextId>
+      <Text>OutY</Text>
+    </Item>
+    <Item>
+      <TextId>3802</TextId>
+      <Text>OutZ</Text>
+    </Item>
+    <Item>
+      <TextId>3803</TextId>
+      <Text>OutLengths</Text>
+    </Item>
+    <Item>
+      <TextId>3804</TextId>
+      <Text>OutWidths</Text>
+    </Item>
+    <Item>
+      <TextId>3805</TextId>
+      <Text>OutAnglesDeg</Text>
+    </Item>
+    <Item>
+      <TextId>3806</TextId>
+      <Text>OutFloors</Text>
+    </Item>
+    <Item>
+      <TextId>3807</TextId>
+      <Text>OutTypologyCodes</Text>
+    </Item>
+    <Item>
+      <TextId>3808</TextId>
+      <Text>ParetoBFZ</Text>
+    </Item>
+    <Item>
+      <TextId>3809</TextId>
+      <Text>ParetoBNZ</Text>
+    </Item>
+    <Item>
+      <TextId>3810</TextId>
+      <Text>ParetoAreasM2</Text>
+    </Item>
+    <Item>
+      <TextId>3811</TextId>
+      <Text>ParetoCount</Text>
+    </Item>
+    <Item>
+      <TextId>3812</TextId>
+      <Text>SelectedParetoIndex</Text>
+    </Item>
+    <Item>
+      <TextId>3813</TextId>
+      <Text>IsValid</Text>
+    </Item>
+    <Item>
+      <TextId>3814</TextId>
+      <Text>ErrorMessage</Text>
+    </Item>
+  </Node>
+  <Node Name="NodeUrbGENSetbackSurfaces">
+    <Item>
+      <TextId>3600</TextId>
+      <Text>Creates individual horizontal setback polygons per exterior wall (schematic).</Text>
+    </Item>
+    <Item>
+      <TextId>3601</TextId>
+      <Text>Building footprints</Text>
+    </Item>
+    <Item>
+      <TextId>3602</TextId>
+      <Text>Building heights in mm</Text>
+    </Item>
+    <Item>
+      <TextId>3603</TextId>
+      <Text>Setback distance: height × factor</Text>
+    </Item>
+    <Item>
+      <TextId>3604</TextId>
+      <Text>Common ground elevation in mm</Text>
+    </Item>
+    <Item>
+      <TextId>3605</TextId>
+      <Text>0 rectangular, 1 chamfered</Text>
+    </Item>
+    <Item>
+      <TextId>3606</TextId>
+      <Text>End chamfer amount</Text>
+    </Item>
+    <Item>
+      <TextId>3641</TextId>
+      <Text>Individual setback Polygon3D surfaces</Text>
+    </Item>
+    <Item>
+      <TextId>3642</TextId>
+      <Text>Building index per setback surface</Text>
+    </Item>
+    <Item>
+      <TextId>3643</TextId>
+      <Text>Distance per building</Text>
+    </Item>
+    <Item>
+      <TextId>3644</TextId>
+      <Text>Number of surfaces per building</Text>
+    </Item>
+    <Item>
+      <TextId>3645</TextId>
+      <Text>Calculation successful</Text>
+    </Item>
+    <Item>
+      <TextId>3646</TextId>
+      <Text>Error message</Text>
+    </Item>
+  </Node>
+</Element>

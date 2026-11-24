@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\DrawingFileSelection</LanguageFile>
+  <Script>
+    <Name>.\NodeDrawingFileSelection.py</Name>
+    <Uuid>98c774f2-0c2e-4cf0-9728-0cb98043ba7c</Uuid>
+    <Title>Teilbild auswählen</Title>
+    <TextId>31001</TextId>
+    <Version>1.0.0</Version>
+  </Script>
+  <Page>
+    <Name>TeilbildAuswahl</Name>
+    <Parameter>
+      <Name>SelectRow</Name>
+      <Text />
+      <ValueType>Row</ValueType>
+      <Parameter>
+        <Name>SelectButton</Name>
+        <Text>Teilbild auswählen</Text>
+        <EventId>100</EventId>
+        <Value>10585</Value>
+        <ValueType>PictureResourceButton</ValueType>
+      </Parameter>
+    </Parameter>
+    <Parameter>
+      <Name>SelectionHint</Name>
+      <Text>Teilbild:</Text>
+      <Value>–</Value>
+      <ValueType>Text</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>FileNumber</Name>
+      <Text>Teilbildnummer</Text>
+      <TextId>31003</TextId>
+      <Value>0</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>FileNumbers</Name>
+      <Text>Teilbildnummern (Liste)</Text>
+      <TextId>31004</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>HasSelection</Name>
+      <Text>Teilbild ausgewählt</Text>
+      <TextId>31005</TextId>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

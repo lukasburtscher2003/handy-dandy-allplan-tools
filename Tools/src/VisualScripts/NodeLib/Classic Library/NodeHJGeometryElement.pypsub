@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Element>
+    <Script>
+        <Name>.\NodeHJGeometryElement.py</Name>
+        <Uuid>83f8a393-70c7-4ef5-b185-38f352fc37d9</Uuid>
+        <Title>HJ GeometryElement</Title>
+        <TextId>1001</TextId>
+        <Version>1.0</Version>
+    </Script>
+    <Page>
+        <Name>__IN_MANDATORY__</Name>
+        <Parameter>
+            <Name>Object</Name>
+            <Text>Geometry object</Text>
+            <TextId>1002</TextId>
+            <Value></Value>
+            <ValueType>list{$GeometryObject</ValueType>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>__IN_OPTIONAL__</Name>
+        <Parameter>
+            <Name>FormatProperties</Name>
+            <Text>Format properties</Text>
+            <TextId>1003</TextId>
+            <Value></Value>
+            <ValueType>list{$FormatProperties}</ValueType>
+        </Parameter>
+        <Parameter>
+            <Name>Attributes</Name>
+            <Text>Attributes</Text>
+            <TextId>1005</TextId>
+            <ValueType>list{$Attribute}</ValueType>
+            <ListState>3</ListState>
+        </Parameter>
+        <Parameter>
+            <Name>Area2DProperties</Name>
+            <Text>Area 2D properties</Text>
+            <TextId>1004</TextId>
+            <Value></Value>
+            <ValueType>$Area2DProperties</ValueType>
+            <Visible>False</Visible>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>__OUT__</Name>
+        <Parameter>
+            <Name>Element</Name>
+            <Text>Element</Text>
+            <TextId>1005</TextId>
+            <Value></Value>
+            <ValueType>list{$Element}</ValueType>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>__HiddenPage__</Name>
+        <Parameter>
+            <Name>CreateModelObjects</Name>
+            <Value>True</Value>
+            <ValueType>CheckBox</ValueType>
+        </Parameter>
+        <Parameter>
+            <Name>CreateModelPreviewObjects</Name>
+            <Value>False</Value>
+            <ValueType>CheckBox</ValueType>
+        </Parameter>
+        <Parameter>
+            <Name>Executed</Name>
+            <Value>False</Value>
+            <ValueType>CheckBox</ValueType>
+        </Parameter>
+        <Parameter>
+            <Name>GeometryElement</Name>
+            <Text>Migrated to Object</Text>
+            <TextId>0</TextId>
+            <Value>[]</Value>
+            <ValueType>list{$GeometryObject</ValueType>
+            <Persistent>No</Persistent>
+        </Parameter>
+    </Page>
+</Element>

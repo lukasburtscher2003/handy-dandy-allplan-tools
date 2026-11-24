@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENSeededPoints.py</Name>
+    <Uuid>8443c1f0-1483-5725-bb47-ae14b9b459dc</Uuid>
+    <Title>UrbGEN SeededPoints</Title>
+    <TextId>1300</TextId>
+    <Version>0.2</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>Count</Name>
+      <Text>Point count</Text>
+      <TextId>1301</TextId>
+      <Value>10</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MinX</Name>
+      <Text>Minimum X [mm]</Text>
+      <TextId>1302</TextId>
+      <Value>0</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MaxX</Name>
+      <Text>Maximum X [mm]</Text>
+      <TextId>1303</TextId>
+      <Value>100000</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MinY</Name>
+      <Text>Minimum Y [mm]</Text>
+      <TextId>1304</TextId>
+      <Value>0</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MaxY</Name>
+      <Text>Maximum Y [mm]</Text>
+      <TextId>1305</TextId>
+      <Value>100000</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Z</Name>
+      <Text>Z [mm]</Text>
+      <TextId>1306</TextId>
+      <Value>0</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Seed</Name>
+      <Text>Random seed</Text>
+      <TextId>1307</TextId>
+      <Value>1</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MinDistance</Name>
+      <Text>Minimum spacing [mm]</Text>
+      <TextId>1308</TextId>
+      <Value>0</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MaxAttempts</Name>
+      <Text>Maximum attempts</Text>
+      <TextId>1309</TextId>
+      <Value>3000</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>X</Name>
+      <Text>X coordinates [mm]</Text>
+      <TextId>1341</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Y</Name>
+      <Text>Y coordinates [mm]</Text>
+      <TextId>1342</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ZValues</Name>
+      <Text>Z coordinates [mm]</Text>
+      <TextId>1343</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Generated</Name>
+      <Text>Generated count</Text>
+      <TextId>1344</TextId>
+      <Value />
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Complete</Name>
+      <Text>Requested count reached</Text>
+      <TextId>1345</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

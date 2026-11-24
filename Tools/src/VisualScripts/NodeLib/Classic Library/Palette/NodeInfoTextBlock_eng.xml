@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <StringTable text="NodeInfoTextBlock" />
+  <Node Name="NodeInfoTextBlock">
+    <Item>
+      <TextId>72001</TextId>
+      <Text>Info text (full width)</Text>
+    </Item>
+    <Item>
+      <TextId>72002</TextId>
+      <Text>Text to display</Text>
+    </Item>
+    <Item>
+      <TextId>72003</TextId>
+      <Text>Information</Text>
+    </Item>
+  </Node>
+</Element>

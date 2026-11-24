@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENVariantSeeds.py</Name>
+    <Uuid>281869b4-cdd4-533f-96da-5d2090819939</Uuid>
+    <Title>UrbGEN VariantSeeds</Title>
+    <TextId>1500</TextId>
+    <Version>0.2</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>BaseSeed</Name>
+      <Text>Base seed</Text>
+      <TextId>1501</TextId>
+      <Value>1</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Count</Name>
+      <Text>Number of variants</Text>
+      <TextId>1502</TextId>
+      <Value>10</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Stride</Name>
+      <Text>Seed increment</Text>
+      <TextId>1503</TextId>
+      <Value>1</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>Seeds</Name>
+      <Text>Variant seed list</Text>
+      <TextId>1541</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Indices</Name>
+      <Text>Variant indices</Text>
+      <TextId>1542</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

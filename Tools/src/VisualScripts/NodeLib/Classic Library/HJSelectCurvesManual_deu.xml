@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Element>
+	<StringTable>HJ manual curve selection</StringTable>
+	<Node Name="NodeHJSelectCurvesManual">
+		<Item><TextId>1121</TextId><Text>HJ Select Curves Manual</Text><Description/><Note/><Bitmap/></Item>
+		<Item><TextId>1123</TextId><Text>Grundstück auswählen</Text><Description/><Note/><Bitmap/></Item>
+		<Item><TextId>1125</TextId><Text>Grundstücksgrenze auswählen</Text><Description/><Note/><Bitmap/></Item>
+		<Item><TextId>1126</TextId><Text>Selektierte Kurven-Objekte</Text><Description/><Note/><Bitmap/></Item>
+		<Item><TextId>1127</TextId><Text>Selektierte Geometrie</Text><Description/><Note/><Bitmap/></Item>
+		<Item><TextId>1128</TextId><Text>Assoziative Objekte</Text><Description/><Note/><Bitmap/></Item>
+		<Item><TextId>1044</TextId><Text>Objektfilter</Text><Description/><Note/><Bitmap/></Item>
+	</Node>
+</Element>

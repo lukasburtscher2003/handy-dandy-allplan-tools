@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENBoundaryAlign.py</Name>
+    <Uuid>8f169380-8ea5-4d0c-bfb3-cade2535f6d5</Uuid>
+    <Title>UrbGEN BoundaryAlign</Title>
+    <TextId>1700</TextId>
+    <Version>0.1</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>Boundary</Name>
+      <Text>Boundary Polygon</Text>
+      <TextId>1701</TextId>
+      <Value />
+      <ValueType>Polygon3D</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PlacementPoints</Name>
+      <Text>Placement Points</Text>
+      <TextId>1702</TextId>
+      <Value />
+      <ValueType>list{Point3D}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>AngleOffset</Name>
+      <Text>Angle Offset [deg]</Text>
+      <TextId>1703</TextId>
+      <Value>0</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>ZAnglesDeg</Name>
+      <Text>Rotation Angles [deg]</Text>
+      <TextId>1704</TextId>
+      <Value />
+      <ValueType>list{Angle;Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>EdgeIndices</Name>
+      <Text>Nearest Edge Indices</Text>
+      <TextId>1705</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>EdgeDistances</Name>
+      <Text>Nearest Edge Distances [model units]</Text>
+      <TextId>1706</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ValidResults</Name>
+      <Text>Valid Results</Text>
+      <TextId>1707</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ErrorMessages</Name>
+      <Text>Error Messages</Text>
+      <TextId>1708</TextId>
+      <Value />
+      <ValueType>list{String}</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Text>CreateModelObjects</Text>
+      <TextId>0</TextId>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Text>CreateModelPreviewObjects</Text>
+      <TextId>0</TextId>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Text>Executed</Text>
+      <TextId>0</TextId>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

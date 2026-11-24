@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENLevelSchedule.py</Name>
+    <Uuid>ff0f4c6e-a304-45df-9cdf-f297d3d2eb36</Uuid>
+    <Title>UrbGEN LevelSchedule</Title>
+    <TextId>3200</TextId>
+    <Version>0.6</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>X</Name>
+      <Text>X</Text>
+      <TextId>3201</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Y</Name>
+      <Text>Y</Text>
+      <TextId>3202</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Z</Name>
+      <Text>Z</Text>
+      <TextId>3203</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Lengths</Name>
+      <Text>Lengths</Text>
+      <TextId>3204</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Widths</Name>
+      <Text>Widths</Text>
+      <TextId>3205</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>AnglesDeg</Name>
+      <Text>AnglesDeg</Text>
+      <TextId>3206</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Floors</Name>
+      <Text>Floors</Text>
+      <TextId>3207</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TypologyCodes</Name>
+      <Text>TypologyCodes</Text>
+      <TextId>3208</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>FloorHeight</Name>
+      <Text>FloorHeight</Text>
+      <TextId>3209</TextId>
+      <Value>3000</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>PodiumFloors</Name>
+      <Text>PodiumFloors</Text>
+      <TextId>3210</TextId>
+      <Value>2</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>BuildingIndex</Name>
+      <Text>BuildingIndex</Text>
+      <TextId>3241</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>FloorIndex</Name>
+      <Text>FloorIndex</Text>
+      <TextId>3242</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>LevelX</Name>
+      <Text>LevelX</Text>
+      <TextId>3243</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>LevelY</Name>
+      <Text>LevelY</Text>
+      <TextId>3244</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>LevelZ</Name>
+      <Text>LevelZ</Text>
+      <TextId>3245</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>LevelLengths</Name>
+      <Text>LevelLengths</Text>
+      <TextId>3246</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>LevelWidths</Name>
+      <Text>LevelWidths</Text>
+      <TextId>3247</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>LevelAnglesDeg</Name>
+      <Text>LevelAnglesDeg</Text>
+      <TextId>3248</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>FloorHeights</Name>
+      <Text>FloorHeights</Text>
+      <TextId>3249</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>LevelTypologyCodes</Name>
+      <Text>LevelTypologyCodes</Text>
+      <TextId>3250</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IsPodium</Name>
+      <Text>IsPodium</Text>
+      <TextId>3251</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IsValid</Name>
+      <Text>IsValid</Text>
+      <TextId>3252</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ErrorMessage</Name>
+      <Text>ErrorMessage</Text>
+      <TextId>3253</TextId>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

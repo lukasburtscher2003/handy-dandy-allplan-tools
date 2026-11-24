@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENVariantReport.py</Name>
+    <Uuid>a936374e-63af-5f98-a732-ea0c6b27b54d</Uuid>
+    <Title>UrbGEN VariantReport</Title>
+    <TextId>3600</TextId>
+    <Version>0.7</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>Boundary</Name>
+      <Text>Boundary</Text>
+      <TextId>3601</TextId>
+      <Value />
+      <ValueType>Polygon3D</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>X</Name>
+      <Text>X</Text>
+      <TextId>3602</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Y</Name>
+      <Text>Y</Text>
+      <TextId>3603</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Z</Name>
+      <Text>Z</Text>
+      <TextId>3604</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Lengths</Name>
+      <Text>Lengths</Text>
+      <TextId>3605</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Widths</Name>
+      <Text>Widths</Text>
+      <TextId>3606</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>AnglesDeg</Name>
+      <Text>AnglesDeg</Text>
+      <TextId>3607</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Floors</Name>
+      <Text>Floors</Text>
+      <TextId>3608</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TypologyCodes</Name>
+      <Text>TypologyCodes</Text>
+      <TextId>3609</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>NetGroundAreaM2</Name>
+      <Text>NetGroundAreaM2</Text>
+      <TextId>3610</TextId>
+      <Value>10000</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>GGFFactor</Name>
+      <Text>GGFFactor</Text>
+      <TextId>3611</TextId>
+      <Value>1</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ArmLengthRatio</Name>
+      <Text>ArmLengthRatio</Text>
+      <TextId>3612</TextId>
+      <Value>1.3</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>MinDistance</Name>
+      <Text>MinDistance</Text>
+      <TextId>3613</TextId>
+      <Value>5000</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>BFZ</Name>
+      <Text>BFZ</Text>
+      <TextId>3700</TextId>
+      <Value />
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>BNZ</Name>
+      <Text>BNZ</Text>
+      <TextId>3701</TextId>
+      <Value />
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CoveredAreaM2</Name>
+      <Text>CoveredAreaM2</Text>
+      <TextId>3702</TextId>
+      <Value />
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>GrossFloorAreaM2</Name>
+      <Text>GrossFloorAreaM2</Text>
+      <TextId>3703</TextId>
+      <Value />
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OpenAreaM2</Name>
+      <Text>OpenAreaM2</Text>
+      <TextId>3704</TextId>
+      <Value />
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>BuildingAreasM2</Name>
+      <Text>BuildingAreasM2</Text>
+      <TextId>3705</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>BuildingCount</Name>
+      <Text>BuildingCount</Text>
+      <TextId>3706</TextId>
+      <Value />
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>GeometryValid</Name>
+      <Text>GeometryValid</Text>
+      <TextId>3707</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IsValid</Name>
+      <Text>IsValid</Text>
+      <TextId>3708</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ErrorMessage</Name>
+      <Text>ErrorMessage</Text>
+      <TextId>3709</TextId>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

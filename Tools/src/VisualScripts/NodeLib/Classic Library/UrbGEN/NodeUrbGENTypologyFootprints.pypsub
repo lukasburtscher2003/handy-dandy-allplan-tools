@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENTypologyFootprints.py</Name>
+    <Uuid>79a6a8c4-bb92-47ec-b3b5-4809e27665c8</Uuid>
+    <Title>UrbGEN TypologyFootprints</Title>
+    <TextId>3000</TextId>
+    <Version>0.6</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>X</Name>
+      <Text>X</Text>
+      <TextId>3001</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Y</Name>
+      <Text>Y</Text>
+      <TextId>3002</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Z</Name>
+      <Text>Z</Text>
+      <TextId>3003</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Lengths</Name>
+      <Text>Lengths</Text>
+      <TextId>3004</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Widths</Name>
+      <Text>Widths</Text>
+      <TextId>3005</TextId>
+      <Value />
+      <ValueType>list{Length}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>AnglesDeg</Name>
+      <Text>AnglesDeg</Text>
+      <TextId>3006</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TypologyCodes</Name>
+      <Text>TypologyCodes</Text>
+      <TextId>3007</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ArmLengthRatio</Name>
+      <Text>ArmLengthRatio</Text>
+      <TextId>3008</TextId>
+      <Value>1.3</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>Footprints</Name>
+      <Text>Footprints</Text>
+      <TextId>3041</TextId>
+      <Value />
+      <ValueType>list{Polygon3D}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ActualAreasM2</Name>
+      <Text>ActualAreasM2</Text>
+      <TextId>3042</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TypologyNames</Name>
+      <Text>TypologyNames</Text>
+      <TextId>3043</TextId>
+      <Value />
+      <ValueType>list{String}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CourtyardIndices</Name>
+      <Text>CourtyardIndices</Text>
+      <TextId>3044</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CourtyardOuter</Name>
+      <Text>CourtyardOuter</Text>
+      <TextId>3045</TextId>
+      <Value />
+      <ValueType>list{Polygon3D}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CourtyardInner</Name>
+      <Text>CourtyardInner</Text>
+      <TextId>3046</TextId>
+      <Value />
+      <ValueType>list{Polygon3D}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IsValid</Name>
+      <Text>IsValid</Text>
+      <TextId>3047</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ErrorMessage</Name>
+      <Text>ErrorMessage</Text>
+      <TextId>3048</TextId>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

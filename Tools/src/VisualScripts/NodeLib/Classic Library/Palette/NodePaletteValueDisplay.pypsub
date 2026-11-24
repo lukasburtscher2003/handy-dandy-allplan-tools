@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\PaletteValueDisplay</LanguageFile>
+  <Script>
+    <Name>.\NodePaletteValueDisplay.py</Name>
+    <Uuid>bd3ba10b-1d76-4a69-8cbd-92b8c491905b</Uuid>
+    <Title>PaletteValueDisplay</Title>
+    <TextId>62001</TextId>
+    <Version>0.2.0</Version>
+  </Script>
+  <Page>
+    <Name>__IN_OPTIONAL__</Name>
+    <Parameter>
+      <Name>InputString</Name>
+      <Text>Text</Text>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>InputInteger</Name>
+      <Text>Ganzzahl</Text>
+      <Value>0</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>InputDouble</Name>
+      <Text>Zahl</Text>
+      <Value>0</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>InputBoolean</Name>
+      <Text>Ja/Nein</Text>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>InputLength</Name>
+      <Text>Laenge [mm]</Text>
+      <Value>0</Value>
+      <ValueType>Length</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>InputArea</Name>
+      <Text>Flaeche [mm2]</Text>
+      <Value>0</Value>
+      <ValueType>Area</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>InputVolume</Name>
+      <Text>Volumen [mm3]</Text>
+      <Value>0</Value>
+      <ValueType>Volume</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>InputAngle</Name>
+      <Text>Winkel [Grad]</Text>
+      <Value>0</Value>
+      <ValueType>Angle</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>DataType</Name>
+      <Text>Quelle: String/Integer/Double/Boolean/Length/Area/Volume/Angle/Auto</Text>
+      <Value>Auto</Value>
+      <ValueType>String</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Unit</Name>
+      <Text>Ausgabeeinheit: Auto/mm/cm/m/mm2/cm2/m2/mm3/cm3/m3/Grad/%</Text>
+      <Value>Auto</Value>
+      <ValueType>String</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>Anzeige</Name>
+    <Text>Anzeige</Text>
+    <Parameter>
+      <Name>DisplayedText</Name>
+      <Text />
+      <Value>–</Value>
+      <ValueType>Text</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

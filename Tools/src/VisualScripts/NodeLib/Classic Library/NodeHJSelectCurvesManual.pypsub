@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Element>
+    <LanguageFile>.\HJSelectCurvesManual</LanguageFile>
+    <Script>
+        <Name>.\NodeHJSelectCurvesManual.py</Name>
+        <Uuid>67b04056-c5b6-4861-907b-645cc7991531</Uuid>
+        <Title>HJ Select Curves Manual</Title>
+        <TextId>1121</TextId>
+        <Version>1.2</Version>
+        <Interactor>True</Interactor>
+    </Script>
+    <Page>
+        <Name>__OUT_WITH_CONTROL__</Name>
+        <Parameter>
+            <Name>AssociativeObject</Name>
+            <Text>Associative object</Text>
+            <TextId>1128</TextId>
+            <Value>True</Value>
+            <ValueType>CheckBox</ValueType>
+            <VisibleAttributeShown>False</VisibleAttributeShown>
+            <Visible>False</Visible>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>Object</Name>
+        <Parameter>
+            <Name>Row</Name>
+            <Text> </Text>
+            <ValueType>Row</ValueType>
+            <Parameter>
+                <Name>Reset</Name>
+                <Text>Grundstück auswählen</Text>
+                <TextId>1123</TextId>
+                <EventId>1000</EventId>
+                <ValueType>Button</ValueType>
+                <Visible>True</Visible>
+            </Parameter>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>__IN_OPTIONAL__</Name>
+        <Parameter>
+            <Name>ObjectFilter</Name>
+            <Text>Object filter</Text>
+            <TextId>1044</TextId>
+            <Value></Value>
+            <ValueType>list{$Filter}</ValueType>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>__OUT__</Name>
+        <Parameter>
+            <Name>SelectedObjects</Name>
+            <Text>Selected objects</Text>
+            <TextId>1126</TextId>
+            <ValueType>list{$Object}</ValueType>
+        </Parameter>
+        <Parameter>
+            <Name>SelectedGeometry</Name>
+            <Text>Selected geometry</Text>
+            <TextId>1127</TextId>
+            <ValueType>list{$GeometryObject;$Curve}</ValueType>
+        </Parameter>
+    </Page>
+    <Page>
+        <Name>__HiddenPage__</Name>
+        <Parameter>
+            <Name>Executed</Name>
+            <Value>True</Value>
+            <ValueType>CheckBox</ValueType>
+        </Parameter>
+        <Parameter>
+            <Name>DisplayText</Name>
+            <Value>Select the object {1125}</Value>
+            <ValueType>DisplayText</ValueType>
+        </Parameter>
+        <Parameter>
+            <Name>AssociativeObjectUUID</Name>
+            <Value></Value>
+            <ValueType>list{String}</ValueType>
+        </Parameter>
+        <Parameter>
+            <Name>AssociativeObjectTimeStamp</Name>
+            <Value></Value>
+            <ValueType>list{Integer}</ValueType>
+        </Parameter>
+    </Page>
+</Element>

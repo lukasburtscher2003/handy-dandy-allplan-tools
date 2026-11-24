@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENTypologySampler.py</Name>
+    <Uuid>9b23c437-0493-5e73-bca2-147277b6db62</Uuid>
+    <Title>UrbGEN TypologySampler</Title>
+    <TextId>1400</TextId>
+    <Version>0.2</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>Count</Name>
+      <Text>Number of buildings</Text>
+      <TextId>1401</TextId>
+      <Value>10</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Weights</Name>
+      <Text>Weights I L T H U Cross Courtyard</Text>
+      <TextId>1402</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>Seed</Name>
+      <Text>Random seed</Text>
+      <TextId>1403</TextId>
+      <Value>1</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>TypologyIds</Name>
+      <Text>Typology IDs [0..6]</Text>
+      <TextId>1441</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>TypologyNames</Name>
+      <Text>Typology names</Text>
+      <TextId>1442</TextId>
+      <Value />
+      <ValueType>list{String}</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

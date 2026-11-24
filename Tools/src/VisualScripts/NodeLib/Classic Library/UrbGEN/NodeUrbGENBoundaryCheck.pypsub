@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENBoundaryCheck.py</Name>
+    <Uuid>099b3c99-ed1c-4a4d-945e-5605c24c4abc</Uuid>
+    <Title>UrbGEN BoundaryCheck</Title>
+    <TextId>1600</TextId>
+    <Version>0.1</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>BuildingFootprints</Name>
+      <Text>Building Footprints</Text>
+      <TextId>1601</TextId>
+      <Value />
+      <ValueType>list{Polygon3D}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>Boundary</Name>
+      <Text>Buildable Boundary</Text>
+      <TextId>1602</TextId>
+      <Value />
+      <ValueType>Polygon3D</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Tolerance</Name>
+      <Text>Tolerance [m²]</Text>
+      <TextId>1603</TextId>
+      <Value>0.001</Value>
+      <ValueType>Double</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>InsideStates</Name>
+      <Text>Inside States</Text>
+      <TextId>1604</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>OutsideAreas</Name>
+      <Text>Outside Areas [m²]</Text>
+      <TextId>1605</TextId>
+      <Value />
+      <ValueType>list{Double}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ValidResults</Name>
+      <Text>Valid Results</Text>
+      <TextId>1606</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ErrorMessages</Name>
+      <Text>Error Messages</Text>
+      <TextId>1607</TextId>
+      <Value />
+      <ValueType>list{String}</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Text>CreateModelObjects</Text>
+      <TextId>0</TextId>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Text>CreateModelPreviewObjects</Text>
+      <TextId>0</TextId>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Text>Executed</Text>
+      <TextId>0</TextId>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

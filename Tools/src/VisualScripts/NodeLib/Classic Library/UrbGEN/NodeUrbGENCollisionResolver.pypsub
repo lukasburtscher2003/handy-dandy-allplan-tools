@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENCollisionResolver.py</Name>
+    <Uuid>2869045f-ff43-5b59-9eec-e566ce40c975</Uuid>
+    <Title>UrbGEN CollisionResolver</Title>
+    <TextId>1200</TextId>
+    <Version>0.2</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>Count</Name>
+      <Text>Number of buildings</Text>
+      <TextId>1201</TextId>
+      <Value>4</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IndexA</Name>
+      <Text>Pair index A</Text>
+      <TextId>1202</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>IndexB</Name>
+      <Text>Pair index B</Text>
+      <TextId>1203</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>CollisionStates</Name>
+      <Text>Collision states</Text>
+      <TextId>1204</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>ValidResults</Name>
+      <Text>Valid results</Text>
+      <TextId>1205</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>KeepStates</Name>
+      <Text>Keep building</Text>
+      <TextId>1241</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>RejectedBy</Name>
+      <Text>Rejected by index</Text>
+      <TextId>1242</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>AcceptedIndices</Name>
+      <Text>Accepted indices</Text>
+      <TextId>1243</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IsValid</Name>
+      <Text>All inputs valid</Text>
+      <TextId>1244</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>

@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Element>
+  <LanguageFile>.\Iteration</LanguageFile>
+  <Script>
+    <Name>.\NodeUrbGENVariantSelector.py</Name>
+    <Uuid>1634abf7-85c6-5a2f-b7c9-7de706af3010</Uuid>
+    <Title>UrbGEN VariantSelector</Title>
+    <TextId>1900</TextId>
+    <Version>0.1</Version>
+  </Script>
+  <Page>
+    <Name>__IN_MANDATORY__</Name>
+    <Parameter>
+      <Name>CandidateCount</Name>
+      <Text>Number of candidate buildings</Text>
+      <TextId>1902</TextId>
+      <Value>50</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>InsideStates</Name>
+      <Text>Boundary: inside mask</Text>
+      <TextId>1903</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>BoundaryValid</Name>
+      <Text>Boundary: valid geometry</Text>
+      <TextId>1904</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>IndexA</Name>
+      <Text>Pair index A</Text>
+      <TextId>1905</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>IndexB</Name>
+      <Text>Pair index B</Text>
+      <TextId>1906</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>CollisionStates</Name>
+      <Text>Collision per pair</Text>
+      <TextId>1907</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>CollisionValid</Name>
+      <Text>Collision: valid geometry</Text>
+      <TextId>1908</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+      <ListState>1</ListState>
+      <ListStateRange>1</ListStateRange>
+    </Parameter>
+    <Parameter>
+      <Name>TargetCount</Name>
+      <Text>Requested buildings per variant</Text>
+      <TextId>1909</TextId>
+      <Value>10</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>VariantCount</Name>
+      <Text>Number of variants</Text>
+      <TextId>1910</TextId>
+      <Value>5</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>BaseSeed</Name>
+      <Text>Variant base seed</Text>
+      <TextId>1911</TextId>
+      <Value>42</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>SelectedVariant</Name>
+      <Text>Selected variant (zero based)</Text>
+      <TextId>1912</TextId>
+      <Value>0</Value>
+      <ValueType>Integer</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__OUT__</Name>
+    <Parameter>
+      <Name>KeepStates</Name>
+      <Text>Keep state per candidate</Text>
+      <TextId>1941</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>SelectedIndices</Name>
+      <Text>Indices in selected variant</Text>
+      <TextId>1942</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>VariantCounts</Name>
+      <Text>Accepted count per variant</Text>
+      <TextId>1943</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>VariantComplete</Name>
+      <Text>Target reached per variant</Text>
+      <TextId>1944</TextId>
+      <Value />
+      <ValueType>list{CheckBox}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>VariantSeeds</Name>
+      <Text>Seed per variant</Text>
+      <TextId>1945</TextId>
+      <Value />
+      <ValueType>list{Integer}</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>SelectedCount</Name>
+      <Text>Selected accepted count</Text>
+      <TextId>1946</TextId>
+      <Value />
+      <ValueType>Integer</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>IsValid</Name>
+      <Text>Checks valid</Text>
+      <TextId>1947</TextId>
+      <Value />
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>ErrorMessage</Name>
+      <Text>Error information</Text>
+      <TextId>1948</TextId>
+      <Value />
+      <ValueType>String</ValueType>
+    </Parameter>
+  </Page>
+  <Page>
+    <Name>__HiddenPage__</Name>
+    <Parameter>
+      <Name>CreateModelObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>CreateModelPreviewObjects</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+    <Parameter>
+      <Name>Executed</Name>
+      <Value>False</Value>
+      <ValueType>CheckBox</ValueType>
+    </Parameter>
+  </Page>
+</Element>
