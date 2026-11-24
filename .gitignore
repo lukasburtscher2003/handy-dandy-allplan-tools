@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Allplan – automatisch generierte Dateien
+__BuildingElementStubFiles/
+
+# Temporäre Dateien
+*.tmp
+*.bak
+*.log
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Build-Artefakte
+*.allep
+dist/
+build/
+
+# Private Entwicklerdokumentation
+.dev/
