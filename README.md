@@ -18,7 +18,7 @@ Entwickelt für Allplan 2027. Die Kompatibilität mit früheren Allplan-Versione
 
 Die Tools werden kontinuierlich weiterentwickelt. Fehlerberichte, Anregungen und Verbesserungsvorschläge sind willkommen.
 
-## Installation
+## Installation [Neueste Version herunterladen](https://github.com/lukasburtscher2003/handy-dandy-allplan-tools/releases/latest)
 1. Die aktuelle .allep-Datei unter Releases herunterladen.
 
 2. Die Datei per Drag-and-Drop in Allplan öffnen und den Installationsanweisungen folgen.
