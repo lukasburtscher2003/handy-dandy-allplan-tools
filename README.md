@@ -7,7 +7,7 @@ Eine Sammlung selbst entwickelter Erweiterungen für Allplan zur Automatisierung
 ### HJ Dev-Tutorial
 Ein Beispiel- und Lernwerkzeug für die Entwicklung eigener PythonParts und VisualScripts in Allplan. Es dient als Grundlage für die Entwicklung weiterer individueller Erweiterungen.
 
-### HJ UrbGEN
+### HJ Bebauungsvarianten
 Ein parametrisches Werkzeug zur automatisierten Erstellung und Untersuchung von Bebauungsvarianten unter Berücksichtigung städtebaulicher Kennzahlen, Grundstücksgrenzen und Gebäudeabstände.
 
 ## Kompatibilität
