@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Feedback | HJ Support</title>
+		<link rel="stylesheet" href="assets/style.css">
+		<style>
+			.feedback-form { display: grid; gap: 18px; }
+			.form-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+			.field label { display: block; font-weight: 700; margin-bottom: 6px; }
+			.field input, .field select, .field textarea {
+				width: 100%; padding: 12px; border: 1px solid #aaa;
+				border-radius: 3px; font: inherit; color: #242424; background: white;
+			}
+			.field textarea { min-height: 150px; resize: vertical; }
+			.field small, .hint { color: #646464; font-size: .875rem; }
+			.consent { display: flex; align-items: flex-start; gap: 10px; }
+			.consent input { margin-top: 6px; }
+			.submit-button { cursor: pointer; justify-self: start; font: inherit; font-weight: bold; }
+			.submit-button:disabled { opacity: .5; cursor: not-allowed; }
+			.feedback-status { margin: 0; min-height: 1.5em; }
+			.feedback-status[data-state="success"] { color: #166534; }
+			.feedback-status[data-state="error"] { color: #a12121; }
+			.honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+			@media (max-width: 650px) { .form-columns { grid-template-columns: 1fr; } }
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-inner">
+				<a href="index.html" aria-label="Startseite">
+					<img class="logo" src="assets/logo-hj.jpg" alt="Hilti &amp; Jehle">
+				</a>
+				<div class="brand">HJ Support<small>Digitale Werkzeuge &amp; Dokumentation</small></div>
+				<span class="status">FEEDBACK</span>
+			</div>
+		</header>
+		<div class="layout">
+			<nav class="sidebar" aria-label="Hauptnavigation">
+				<div class="label">Supportportal</div>
+				<a href="index.html">Übersicht</a>
+				<a href="urbgen.html">UrbGEN</a>
+				<a href="geoimport.html">GeoIMPORT</a>
+				<a href="modelcheck.html">ModelCHECK</a>
+				<a href="faq.html">FAQ &amp; Hilfe</a>
+				<a href="versionen.html">Versionshistorie</a>
+				<a href="feedback.html" aria-current="page">Feedback</a>
+			</nav>
+			<main>
+				<div class="breadcrumb">Support / Feedback</div>
+				<div class="hero">
+					<div class="eyebrow">Handy Dandy Allplan Tools</div>
+					<h1>Dein Feedback zählt.</h1>
+					<p>Fehler gefunden, eine Idee für ein neues Werkzeug oder einen Verbesserungsvorschlag? Hilf mit, die Tools weiterzuentwickeln.</p>
+				</div>
+				<section class="panel">
+					<h2>Feedback geben</h2>
+					<p class="hint">Mit * gekennzeichnete Felder sind Pflichtfelder. Eine Kontaktadresse ist freiwillig.</p>
+					<!-- Nach IT-Freigabe den eigenen Formspree-Endpunkt in data-endpoint eintragen. -->
+					<form id="feedback" class="feedback-form" method="post" data-endpoint="https://formspree.io/f/xnpdrdab">
+						<div class="form-columns">
+							<div class="field">
+								<label for="tool">Werkzeug *</label>
+								<select id="tool" name="Werkzeug" required>
+									<option value="">Bitte auswählen</option>
+									<option>UrbGEN</option>
+									<option>GeoIMPORT</option>
+									<option>ModelCHECK</option>
+									<option>HJ Tools / Installation</option>
+									<option>Sonstiges / Neues Tool</option>
+								</select>
+							</div>
+							<div class="field">
+								<label for="category">Art des Feedbacks *</label>
+								<select id="category" name="Feedbacktyp" required>
+									<option value="">Bitte auswählen</option>
+									<option>Fehlermeldung</option>
+									<option>Verbesserungsvorschlag</option>
+									<option>Funktionswunsch</option>
+									<option>Allgemeines Feedback</option>
+								</select>
+							</div>
+						</div>
+						<div class="field">
+							<label for="subject">Betreff *</label>
+							<input id="subject" name="Betreff" maxlength="120" required placeholder="Kurze Zusammenfassung">
+						</div>
+						<div class="field">
+							<label for="message">Beschreibung *</label>
+							<textarea id="message" name="Nachricht" maxlength="4000" required placeholder="Was ist passiert oder was würdest du dir wünschen? Bei Fehlern bitte auch die nötigen Schritte beschreiben."></textarea>
+						</div>
+						<div class="form-columns">
+							<div class="field">
+								<label for="version">Allplan-/Tool-Version</label>
+								<input id="version" name="Version" maxlength="100" placeholder="z. B. Allplan 2027 / GeoIMPORT 0.4">
+							</div>
+							<div class="field">
+								<label for="email">E-Mail für Rückfragen (optional)</label>
+								<input id="email" name="email" type="email" maxlength="200" autocomplete="email" placeholder="name@beispiel.at">
+							</div>
+						</div>
+						<div class="honeypot" aria-hidden="true">
+							<label>Bitte leer lassen <input name="_gotcha" tabindex="-1" autocomplete="off"></label>
+						</div>
+						<div class="note">
+							<b>Hinweis:</b> Keine vertraulichen Projektdaten, Kundennamen, Zugangsdaten oder personenbezogenen Daten Dritter eingeben.
+							Bei aktiviertem Versand werden die eingegebenen Daten über den externen Formulardienst Formspree verarbeitet und an den Support weitergeleitet.
+							<a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Datenschutzhinweise des Dienstes</a>.
+						</div>
+						<label class="consent">
+							<input type="checkbox" required name="HinweisBestaetigt" value="Ja">
+							<span>Ich habe den Hinweis gelesen und möchte mein Feedback übermitteln. *</span>
+						</label>
+						<button type="submit" class="button submit-button" id="send" disabled>Feedback senden</button>
+						<p class="feedback-status" id="feedback-status" role="status" aria-live="polite">Der Mailversand ist noch nicht eingerichtet.</p>
+						<noscript><p>Aktiviere JavaScript, um das Formular zu verwenden.</p></noscript>
+					</form>
+				</section>
+			</main>
+		</div>
+		<footer class="footer">
+			<span>© 2026 Lukas Burtscher · Dokumentation</span>
+			<span>Hilti &amp; Jehle · HJ Support</span>
+		</footer>
+		<script>
+			"use strict";
+			const form = document.getElementById("feedback");
+			const button = document.getElementById("send");
+			const status = document.getElementById("feedback-status");
+			const endpoint = form.dataset.endpoint.trim();
+			const configured = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint);
+
+			function showStatus(message, state = "") {
+				status.textContent = message;
+				status.dataset.state = state;
+			}
+
+			// No recipient or API credentials are stored in the public website.
+			// Without a valid configured endpoint, the form never sends anything.
+			button.disabled = !configured;
+			if (configured) showStatus("");
+
+			const selectedTool = new URLSearchParams(location.search).get("tool");
+			const toolSelect = document.getElementById("tool");
+			for (const option of toolSelect.options) {
+				if (option.value === selectedTool) toolSelect.value = selectedTool;
+			}
+
+			form.addEventListener("submit", async (event) => {
+				event.preventDefault();
+				if (!configured || button.disabled || !form.reportValidity()) return;
+				button.disabled = true;
+				showStatus("Feedback wird gesendet …");
+
+				try {
+					const response = await fetch(endpoint, {
+						method: "POST",
+						body: new FormData(form),
+						headers: { Accept: "application/json" }
+					});
+					if (!response.ok) throw new Error("Versand fehlgeschlagen");
+
+					form.reset();
+					showStatus("Vielen Dank! Dein Feedback wurde übermittelt.", "success");
+				} catch (error) {
+					showStatus("Das Feedback konnte nicht gesendet werden. Bitte später erneut versuchen. Deine Eingaben bleiben erhalten.", "error");
+				} finally {
+					button.disabled = false;
+				}
+			});
+		</script>
+	</body>
+</html>
