@@ -1,7 +1,7 @@
 plugin:
   name: HJ Tools
   UUID: 2d934cb8-9941-4863-8302-d472023100a8
-  version: 2.0.0
+  version: 2.0.1
   developer: lukasburtscher
   default-language: de
   min-allplan-version: 2027
@@ -38,7 +38,7 @@ tools:
       large: PythonPartsActionbar\HJ_Tools\geoimport_128x128.png
 
   - id: modelcheck
-    pyp: Library\HJ_Tools\GeoIMPORT.pyp
+    pyp: Library\HJ_Tools\ModelCHECK.pyp
     display-name:
       de: Modelcheck
       en: Modelcheck
