@@ -29,5 +29,9 @@ Die Tools werden kontinuierlich weiterentwickelt. Fehlerberichte, Anregungen und
 
 5. Für Updates einfach die neueste .allep-Datei installieren.
 
+## Update
+Um ein Update der Tools durchzuführen muss einfach die neue Version per Drag-and-Drop in Allplan gezogen werden.
+Der Update Prozess startet automatisch.
+
 
 © 2026 Lukas Burtscher
