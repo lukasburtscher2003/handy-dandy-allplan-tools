@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>GeoIMPORT | HJ Support</title>
+		<link rel="stylesheet" href="assets/style.css">
+		<script src="assets/support.js" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-inner">
+				<a href="index.html" aria-label="Startseite"><img class="logo" src="assets/logo-hj.jpg" alt="Hilti &amp; Jehle"></a>
+				<div class="brand">HJ Support<small>Digitale Werkzeuge &amp; Dokumentation</small></div>
+				<span class="status">ALLPLAN 2027</span>
+			</div>
+		</header>
+		<div class="layout">
+			<nav class="sidebar" aria-label="Hauptnavigation">
+				<div class="label">Supportportal</div>
+				<a href="index.html">Übersicht</a>
+				<a href="urbgen.html">UrbGEN</a>
+				<a href="geoimport.html" aria-current="page">GeoIMPORT</a>
+				<a href="modelcheck.html">ModelCHECK</a>
+				<a href="faq.html">FAQ &amp; Hilfe</a>
+				<a href="versionen.html">Versionshistorie</a>
+				<div class="label">Anleitung</div>
+				<a class="sub" href="#start">1. GeoIMPORT starten</a>
+				<a class="sub" href="#auswahl">2. Grundstück und Ausschnitt wählen</a>
+				<a class="sub" href="#koordinaten">3. Koordinaten und Ursprung</a>
+				<a class="sub" href="#import">4. Geodaten übernehmen</a>
+				<a class="sub" href="#hilfe">5. Häufige Fragen</a>
+			</nav>
+			<main>
+				<div class="breadcrumb">Support / GeoIMPORT</div>
+				<div class="hero">
+					<div class="eyebrow">Werkzeugdokumentation · Version 0.4</div>
+					<h1>GeoIMPORT</h1>
+					<p>Geodaten aus Vorarlberg als gemeinsame Planungsgrundlage direkt in Allplan 2027 übernehmen.</p>
+				</div>
+				<section class="panel" id="start">
+					<h2><span class="step">1</span>GeoIMPORT starten</h2>
+					<ol>
+						<li>Das freigegebene HJ-Tools-Plugin in Allplan installieren.</li>
+						<li>Ein geeignetes, möglichst leeres Teilbild aktivieren.</li>
+						<li>GeoIMPORT in der Actionbar oder unter Bibliothek → Privat → HJ_Tools öffnen.</li>
+						<li>Bei der ersten Nutzung <b>Umgebung prüfen</b> anklicken. Danach <b>Karte öffnen</b>.</li>
+					</ol>
+					<div class="note">Die Karte öffnet sich innerhalb von Allplan. Es ist kein separater Serverstart und keine Auswahl einer Python.exe erforderlich. Für den Abruf der VOGIS-Daten wird eine Internetverbindung benötigt.</div>
+				</section>
+
+				<section class="panel" id="auswahl">
+					<h2><span class="step">2</span>Grundstück und Ausschnitt wählen</h2>
+					<ol>
+						<li>Adresse oder Grundstück suchen, in die Karte zoomen und die gewünschte Fläche auswählen.</li>
+						<li>Den Exportrahmen festlegen oder anpassen.</li>
+						<li>Grundstücke, Gelände und Luftbild nach Bedarf aktivieren.</li>
+						<li>Für den direkten Import sind GeoJSON, XYZ und PNG voreingestellt; die erforderlichen Übergabedateien werden automatisch erzeugt.</li>
+					</ol>
+					<div class="table-wrap">
+						<table>
+							<thead><tr><th>Datenart</th><th>Ergebnis in Allplan</th></tr></thead>
+							<tbody>
+								<tr><td>Grundstücke</td><td>Geschlossene 2D-Polylinien und Grundstücksnummern</td></tr>
+								<tr><td>Gelände</td><td>3D-Geländepunkte mit tatsächlicher Z-Höhe; kein fertiges DGM</td></tr>
+								<tr><td>Luftbild</td><td>Maßstäbliche Pixelfläche, im Projekt gespeichertes Bild</td></tr>
+							</tbody>
+						</table>
+					</div>
+					<p>Mit einer gröberen Rasterweite lassen sich große Geländeausschnitte schneller verarbeiten. Für den direkten Import sind höchstens 100.000 Geländepunkte vorgesehen.</p>
+				</section>
+
+				<section class="panel" id="koordinaten">
+					<h2><span class="step">3</span>Koordinaten und Ursprung</h2>
+					<p>Die horizontale Datenbasis ist MGI / Austria GK West (EPSG:31254).</p>
+					<div class="table-wrap">
+						<table>
+							<thead><tr><th>Koordinate</th><th>Allplan-Achse</th></tr></thead>
+							<tbody><tr><td>Rechtswert / Ostwert</td><td>X</td></tr><tr><td>Hochwert / Nordwert</td><td>Y</td></tr><tr><td>Geländehöhe</td><td>Z</td></tr></tbody>
+						</table>
+					</div>
+					<ul>
+						<li><b>Landeskoordinaten:</b> ursprüngliche GK-West-Koordinaten.</li>
+						<li><b>Exportrahmen:</b> linke untere Ecke als lokaler Exportursprung.</li>
+						<li><b>Benutzerdefiniert:</b> festgelegter XY-Offset.</li>
+					</ul>
+					<p>Der direkte Import mit Projektoffset-Anpassung verwendet den gewählten Exportoffset und berücksichtigt den bestehenden Allplan-Projektoffset. Die Projekteinstellungen werden nicht geändert.</p>
+					<div class="note"><b>Vor dem Import:</b> Bei großen Landeskoordinaten einen passenden Projektoffset mit der Projektleitung abstimmen. Kontrolliere anschließend einen bekannten Punkt über Messen → Koordinaten. Alle Datenarten müssen deckungsgleich sein. Eine bereits vorhandene Georeferenzierung keinesfalls doppelt anwenden.</div>
+				</section>
+
+				<section class="panel" id="import">
+					<h2><span class="step">4</span>Geodaten übernehmen</h2>
+					<ol>
+						<li><b>Geodaten für Allplan vorbereiten</b> anklicken und den Export abwarten.</li>
+						<li>Warnungen prüfen (z. B. Rasterzellen ohne Bodenmesspunkt).</li>
+						<li><b>Geodaten in Allplan übernehmen</b> anklicken.</li>
+						<li>Das Kartenfenster schließt sich; die Exportdatei wird an die Palette übergeben.</li>
+						<li>Schrifthöhe der Grundstücksnummern in der Palette einstellen (Richtwert 2,5 mm).</li>
+						<li>Vorschau und Position prüfen, Platzierung bestätigen.</li>
+					</ol>
+					<p>Die Grundstücksgrenzen können anschließend direkt in <a href="urbgen.html">UrbGEN</a> ausgewählt werden. Der PDF-Export bleibt eine eigenständige Funktion.</p>
+				</section>
+
+				<section class="panel" id="hilfe">
+					<h2><span class="step">5</span>Häufige Fragen</h2>
+					<div class="faq">
+						<details><summary>Der Importbutton fehlt.</summary><p>Prüfe die installierte GeoIMPORT-Version. Starte Allplan vollständig neu und führe einen neuen Export aus. Alte Exportaufträge enthalten die nativen Übergabedaten nicht.</p></details>
+						<details><summary>Die Schrift ist zu groß.</summary><p>Bei der Version mit Schrifthöhenparameter kannst du die Größe über die Allplan-Palette einstellen. Beginne mit 2,5 mm.</p></details>
+						<details><summary>Die Koordinaten stimmen nicht.</summary><p>Prüfe den Exportursprung und den Allplan-Projektoffset. Vergleiche einen bekannten Rechts- und Hochwert. Verwende die Version mit Projektoffset-Anpassung.</p></details>
+						<details><summary>Geländepunkte fehlen oder der Export dauert lange.</summary><p>Verkleinere den Rahmen oder erhöhe die Rasterweite. Leere Rasterzellen können bei fehlenden Bodenmessungen entstehen.</p></details>
+						<details><summary>Die Karte startet nicht.</summary><p>Umgebung prüfen ausführen und die Meldung an den Support weitergeben. Fehlende Bibliotheken werden über das freigegebene Plugin-Verfahren installiert.</p></details>
+					</div>
+					<div class="note">Die Geodaten dienen als Planungsgrundlage. Aktualität, Genauigkeit, rechtlich verbindliche Grenzen und Höhenbezug sind projektspezifisch zu prüfen. Quellen: Land Vorarlberg / VOGIS, BEV. Die jeweiligen Nutzungsbedingungen gelten.</div>
+				</section>
+				<div class="navlinks">
+					<a href="index.html">Zur Übersicht</a>
+					<a href="versionen.html">Versionshistorie</a>
+				</div>
+			</main>
+		</div>
+		<footer class="footer"><span>© 2026 Lukas Burtscher · Dokumentation</span><span>Hilti &amp; Jehle · HJ Support</span></footer>
+	</body>
+</html>

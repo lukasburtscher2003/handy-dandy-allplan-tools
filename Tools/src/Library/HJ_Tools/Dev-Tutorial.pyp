@@ -25,7 +25,7 @@
         <Enabled>True</Enabled>
         <ID>ceaqdeqwsssbttsryubusprdvsfvbupe</ID>
         <DefaultValues>
-            <DefaultValue Name="TutorialLink">Z:\Programme\Allplan2027\Std\Library\VisualScripting\Support\.dev\index.html</DefaultValue>
+            <DefaultValue Name="TutorialLink">https://lukasburtscher2003.github.io/handy-dandy-allplan-tools/</DefaultValue>
         </DefaultValues>
     </SubElement>
 </Element>

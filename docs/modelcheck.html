@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ModelCHECK | HJ Support</title>
+		<link rel="stylesheet" href="assets/style.css">
+		<script src="assets/support.js" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-inner">
+				<a href="index.html" aria-label="Startseite"><img class="logo" src="assets/logo-hj.jpg" alt="Hilti &amp; Jehle"></a>
+				<div class="brand">HJ Support<small>Digitale Werkzeuge &amp; Dokumentation</small></div>
+				<span class="status">ALLPLAN 2027</span>
+			</div>
+		</header>
+		<div class="layout">
+			<nav class="sidebar" aria-label="Hauptnavigation">
+				<div class="label">Supportportal</div>
+				<a href="index.html">Übersicht</a>
+				<a href="urbgen.html">UrbGEN</a>
+				<a href="geoimport.html">GeoIMPORT</a>
+				<a href="modelcheck.html" aria-current="page">ModelCHECK</a>
+				<a href="faq.html">FAQ &amp; Hilfe</a>
+				<a href="versionen.html">Versionshistorie</a>
+				<div class="label">Anleitung</div>
+				<a class="sub" href="#start">1. Modellprüfung starten</a>
+				<a class="sub" href="#pruefungen">2. Prüfungen konfigurieren</a>
+				<a class="sub" href="#volumen">3. Volumenabweichung verstehen</a>
+				<a class="sub" href="#navigation">4. Fehler finden und erneut prüfen</a>
+				<a class="sub" href="#grenzen">5. Hinweise und Grenzen</a>
+			</nav>
+			<main>
+				<div class="breadcrumb">Support / ModelCHECK</div>
+				<div class="hero">
+					<div class="eyebrow">Werkzeugdokumentation · Version 1.0</div>
+					<h1>ModelCHECK</h1>
+					<p>Bauteilvolumen und wichtige Modellattribute prüfen und fehlerhafte Elemente gezielt anspringen.</p>
+				</div>
+				<section class="panel" id="start">
+					<h2><span class="step">1</span>Modellprüfung starten</h2>
+					<ol>
+						<li>ModelCHECK in der Actionbar oder unter Bibliothek → Privat → HJ_Tools öffnen.</li>
+						<li>Die relevanten modellierten Bauteile auswählen und die Auswahl abschließen.</li>
+						<li>Die gewünschten Prüfungen in der Palette aktivieren.</li>
+					</ol>
+					<div class="note">ModelCHECK verändert keine Attribute oder Bauteile. Markierungen dienen ausschließlich als temporäre Orientierung.</div>
+				</section>
+
+				<section class="panel" id="pruefungen">
+					<h2><span class="step">2</span>Prüfungen konfigurieren</h2>
+					<div class="table-wrap">
+						<table>
+							<thead><tr><th>Prüfung</th><th>Was wird erkannt?</th><th>Standard</th></tr></thead>
+							<tbody>
+								<tr><td>Nettovolumen</td><td>Attribut fehlt, ist ungültig, null oder negativ.</td><td>Aktiv</td></tr>
+								<tr><td>Geometrievolumen</td><td>Volumen nicht berechenbar, null oder negativ.</td><td>Aktiv</td></tr>
+								<tr><td>Volumenabweichung</td><td>Abweichung zwischen Attribut und geometrischer Berechnung.</td><td>Aktiv</td></tr>
+								<tr><td>Bezeichnung</td><td>Fehlender oder leerer Wert.</td><td>Aktiv</td></tr>
+								<tr><td>Gewerk, Material, Kostengruppe</td><td>Fehlende oder leere Werte.</td><td>Optional</td></tr>
+							</tbody>
+						</table>
+					</div>
+					<p>Die Einstellung <b>Volumen nur bei Körpern / Volumenattribut</b> blendet ungeeignete Elemente aus der Volumenprüfung aus. Andere aktive Attributprüfungen berücksichtigen sie weiterhin. Der Zähler zeigt an, wie viele Elemente nicht auf Volumen geprüft wurden.</p>
+				</section>
+
+				<section class="panel" id="volumen">
+					<h2><span class="step">3</span>Volumenabweichung verstehen</h2>
+					<p>Das Nettovolumen aus dem Bauteilattribut wird mit dem aus der Geometrie berechneten Volumen in m³ verglichen.</p>
+					<p><code>Abweichung [%] = (1 − Nettovolumen / Geometrievolumen) × 100</code></p>
+					<div class="table-wrap">
+						<table>
+							<thead><tr><th>Nettovolumen</th><th>Geometrievolumen</th><th>Ergebnis</th></tr></thead>
+							<tbody><tr><td>9,8 m³</td><td>10 m³</td><td>+2 %</td></tr><tr><td>8 m³</td><td>10 m³</td><td>+20 %</td></tr><tr><td>0 m³</td><td>10 m³</td><td>Nullvolumen; kein Prozentvergleich</td></tr></tbody>
+						</table>
+					</div>
+					<p>Die Standardtoleranz beträgt 5 %. Bei Überschreitung wird ein Prüfhinweis angezeigt.</p>
+					<div class="note">Mengenregeln, Öffnungen oder Bauteilaufbau können zu fachlich zulässigen Abweichungen führen. Ein Treffer ist kein automatischer Nachweis eines Modellierungsfehlers.</div>
+				</section>
+
+				<section class="panel" id="navigation">
+					<h2><span class="step">4</span>Fehler finden und erneut prüfen</h2>
+					<ol>
+						<li>Die Anzahl ausgewählter und fehlerhafter Elemente ablesen.</li>
+						<li>Mit <b>Zurück</b> und <b>Weiter</b> durch die Treffer wechseln.</li>
+						<li>Bauteilbezeichnung, Fehlerbeschreibung sowie die verfügbaren Volumenwerte kontrollieren.</li>
+						<li>Mit <b>Zoom</b> zum aktuellen Bauteil springen. Optional die Vorschau-Markierung einschalten.</li>
+						<li>Fehler im Modell korrigieren und anschließend <b>Erneut prüfen</b> oder eine neue Auswahl durchführen.</li>
+					</ol>
+					<p>Ein Bauteil kann mehrere Prüfhinweise haben, wird jedoch nur einmal als fehlerhaftes Element gezählt.</p>
+				</section>
+
+				<section class="panel" id="grenzen">
+					<h2><span class="step">5</span>Hinweise und Grenzen</h2>
+					<ul>
+						<li>Die Prüfung bezieht sich auf die aktuelle Elementauswahl.</li>
+						<li>Zusammengesetzte Elemente werden in dieser Version nicht automatisch rekursiv zerlegt.</li>
+						<li>IDS-Regeln, Dublettenprüfung und automatische Korrekturen sind noch nicht enthalten.</li>
+						<li>Das Werkzeug ersetzt keine fachliche Prüfung der Mengenermittlung.</li>
+					</ul>
+					<p>Falls die Markierung nicht sichtbar ist, nutze die Zoom-Funktion und überprüfe die Darstellung des Teilbilds. Bei Problemen stehen weitere Hinweise in <a href="faq.html">FAQ &amp; Hilfe</a>.</p>
+				</section>
+				<div class="navlinks">
+					<a href="index.html">Zur Übersicht</a>
+					<a href="versionen.html">Versionshistorie</a>
+				</div>
+			</main>
+		</div>
+		<footer class="footer"><span>© 2026 Lukas Burtscher · Dokumentation</span><span>Hilti &amp; Jehle · HJ Support</span></footer>
+	</body>
+</html>
