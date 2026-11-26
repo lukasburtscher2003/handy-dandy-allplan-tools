@@ -20,7 +20,7 @@ tools:
       large: PythonPartsActionbar\HJ_Tools\dev-tutorial_128x128.png
 
   - id: urbgen
-    pyp: Library\HJ_Tools\UrbGEN-v2.0.pyp
+    pyp: Library\HJ_Tools\UrbGEN-v1.0.0.pyp
     display-name:
       de: Bebauungsvarianten
       en: Urban-Generation
