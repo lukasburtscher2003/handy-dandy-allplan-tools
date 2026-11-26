@@ -8,22 +8,10 @@
 		<script src="assets/support.js" defer></script>
 	</head>
 	<body>
-		<header class="header">
-			<div class="header-inner">
-				<a href="index.html" aria-label="Startseite"><img class="logo" src="assets/logo-hj.jpg" alt="Hilti &amp; Jehle"></a>
-				<div class="brand">HJ Support<small>Digitale Werkzeuge &amp; Dokumentation</small></div>
-				<span class="status">ALLPLAN 2027</span>
-			</div>
-		</header>
+		<header class="header" data-header></header>
 		<div class="layout">
-			<nav class="sidebar" aria-label="Hauptnavigation">
-				<div class="label">Supportportal</div>
-				<a href="index.html">Übersicht</a>
-				<a href="urbgen.html">UrbGEN</a>
-				<a href="geoimport.html">GeoIMPORT</a>
-				<a href="modelcheck.html">ModelCHECK</a>
-				<a href="faq.html">FAQ & Hilfe</a>
-				<a href="versionen.html" aria-current="page">Versionshistorie</a>
+			<nav class="sidebar" aria-label="Hauptnavigation" data-navigation>
+				<noscript><a href="index.html">Zur Übersicht</a></noscript>
 			</nav>
 			<main>
 				<div class="breadcrumb">Support / Versionshistorie</div>
@@ -72,6 +60,6 @@
 				</section>
 			</main>
 		</div>
-		<footer class="footer"><span>© 2026 Lukas Burtscher · Dokumentation</span><span>Hilti &amp; Jehle · HJ Support</span></footer>
+		<footer class="footer" data-footer></footer>
 	</body>
 </html>

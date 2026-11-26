@@ -8,23 +8,10 @@
 		<script src="assets/support.js" defer></script>
 	</head>
 	<body>
-		<header class="header">
-			<div class="header-inner">
-				<a href="index.html" aria-label="Startseite"><img class="logo" src="assets/logo-hj.jpg" alt="Hilti &amp; Jehle"></a>
-				<div class="brand">HJ Support<small>Digitale Werkzeuge &amp; Dokumentation</small></div>
-				<span class="status">ALLPLAN 2027</span>
-			</div>
-		</header>
+		<header class="header" data-header></header>
 		<div class="layout">
-			<nav class="sidebar" aria-label="Hauptnavigation">
-				<div class="label">Supportportal</div>
-				<a href="index.html" aria-current="page">Übersicht</a>
-				<a href="urbgen.html">UrbGEN</a>
-				<a href="geoimport.html">GeoIMPORT</a>
-				<a href="modelcheck.html">ModelCHECK</a>
-				<a href="faq.html">FAQ & Hilfe</a>
-				<a href="versionen.html">Versionshistorie</a>
-				<a href="feedback.html">Feedback</a>
+			<nav class="sidebar" aria-label="Hauptnavigation" data-navigation>
+				<noscript><a href="index.html">Zur Übersicht</a></noscript>
 			</nav>
 			<main>
 				<div class="breadcrumb">Support / Übersicht</div>
@@ -32,32 +19,40 @@
 					<div class="eyebrow">HJ · Digitales Planen</div>
 					<h1>Support &amp; Dokumentation</h1>
 					<p>Anleitungen und Arbeitshilfen für die digitalen Planungswerkzeuge von Hilti &amp; Jehle. Die Werkzeuge werden über das HJ-Tools-Plugin bereitgestellt. Die Dokumentation kann auch lokal geöffnet werden.</p>
-					<div class="grid">
-						<a class="card" href="faq.html">
-							<span class="pill">Support</span>
-							<h2>FAQ &amp; Hilfe</h2>
-							<p>Häufige Fragen und praktische Lösungen bei Problemen.</p>
-							<span class="arrow">Zur Hilfe →</span>
-						</a>
+				</div>
 
-						<a class="card" href="versionen.html">
-							<span class="pill">Updates</span>
-							<h2>Versionshistorie</h2>
-							<p>Dokumentierte Versionen und aktueller Stand.</p>
-							<span class="arrow">Versionen ansehen →</span>
-						</a>
-
-						<a class="card" href="feedback.html">
-							<span class="pill">Feedback</span>
-							<h2>Feedback geben</h2>
-							<p>Fehler melden, Verbesserungsvorschläge und neue Werkzeugideen einreichen.</p>
-							<span class="arrow">Feedback senden →</span>
-						</a>
-					</div>
+				<section class="panel">
+					<h2>Werkzeuge</h2>
+					<label for="search">Werkzeug suchen</label>
+					<input class="search" id="search" data-search type="search" placeholder="z. B. UrbGEN, GeoIMPORT, ModelCHECK">
+					<div class="grid" data-tools></div>
 					<p data-empty hidden>Kein passendes Werkzeug gefunden.</p>
 				</section>
+
+				<div class="grid">
+					<a class="card" href="faq.html">
+						<span class="pill">Support</span>
+						<h2>FAQ &amp; Hilfe</h2>
+						<p>Häufige Fragen und praktische Lösungen bei Problemen.</p>
+						<span class="arrow">Zur Hilfe →</span>
+					</a>
+
+					<a class="card" href="versionen.html">
+						<span class="pill">Updates</span>
+						<h2>Versionshistorie</h2>
+						<p>Dokumentierte Versionen und aktueller Stand.</p>
+						<span class="arrow">Versionen ansehen →</span>
+					</a>
+
+					<a class="card" href="feedback.html">
+						<span class="pill">Feedback</span>
+						<h2>Feedback geben</h2>
+						<p>Fehler melden, Verbesserungsvorschläge und neue Werkzeugideen einreichen.</p>
+						<span class="arrow">Feedback senden →</span>
+					</a>
+				</div>
 			</main>
 		</div>
-		<footer class="footer"><span>© 2026 Lukas Burtscher · Dokumentation</span><span>Hilti &amp; Jehle · HJ Support</span></footer>
+		<footer class="footer" data-footer></footer>
 	</body>
 </html>

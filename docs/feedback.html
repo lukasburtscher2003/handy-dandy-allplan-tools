@@ -5,47 +5,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Feedback | HJ Support</title>
 		<link rel="stylesheet" href="assets/style.css">
-		<style>
-			.feedback-form { display: grid; gap: 18px; }
-			.form-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-			.field label { display: block; font-weight: 700; margin-bottom: 6px; }
-			.field input, .field select, .field textarea {
-				width: 100%; padding: 12px; border: 1px solid #aaa;
-				border-radius: 3px; font: inherit; color: #242424; background: white;
-			}
-			.field textarea { min-height: 150px; resize: vertical; }
-			.field small, .hint { color: #646464; font-size: .875rem; }
-			.consent { display: flex; align-items: flex-start; gap: 10px; }
-			.consent input { margin-top: 6px; }
-			.submit-button { cursor: pointer; justify-self: start; font: inherit; font-weight: bold; }
-			.submit-button:disabled { opacity: .5; cursor: not-allowed; }
-			.feedback-status { margin: 0; min-height: 1.5em; }
-			.feedback-status[data-state="success"] { color: #166534; }
-			.feedback-status[data-state="error"] { color: #a12121; }
-			.honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
-			@media (max-width: 650px) { .form-columns { grid-template-columns: 1fr; } }
-		</style>
+		<link rel="stylesheet" href="assets/feedback.css">
+		<script src="assets/support.js" defer></script>
+		<script src="assets/feedback.js" defer></script>
 	</head>
 	<body>
-		<header class="header">
-			<div class="header-inner">
-				<a href="index.html" aria-label="Startseite">
-					<img class="logo" src="assets/logo-hj.jpg" alt="Hilti &amp; Jehle">
-				</a>
-				<div class="brand">HJ Support<small>Digitale Werkzeuge &amp; Dokumentation</small></div>
-				<span class="status">FEEDBACK</span>
-			</div>
-		</header>
+		<header class="header" data-header data-status="FEEDBACK"></header>
 		<div class="layout">
-			<nav class="sidebar" aria-label="Hauptnavigation">
-				<div class="label">Supportportal</div>
-				<a href="index.html">Übersicht</a>
-				<a href="urbgen.html">UrbGEN</a>
-				<a href="geoimport.html">GeoIMPORT</a>
-				<a href="modelcheck.html">ModelCHECK</a>
-				<a href="faq.html">FAQ &amp; Hilfe</a>
-				<a href="versionen.html">Versionshistorie</a>
-				<a href="feedback.html" aria-current="page">Feedback</a>
+			<nav class="sidebar" aria-label="Hauptnavigation" data-navigation>
+				<noscript><a href="index.html">Zur Übersicht</a></noscript>
 			</nav>
 			<main>
 				<div class="breadcrumb">Support / Feedback</div>
@@ -62,11 +30,8 @@
 						<div class="form-columns">
 							<div class="field">
 								<label for="tool">Werkzeug *</label>
-								<select id="tool" name="Werkzeug" required>
+								<select id="tool" name="Werkzeug" data-feedback-tools required>
 									<option value="">Bitte auswählen</option>
-									<option>UrbGEN</option>
-									<option>GeoIMPORT</option>
-									<option>ModelCHECK</option>
 									<option>HJ Tools / Installation</option>
 									<option>Sonstiges / Neues Tool</option>
 								</select>
@@ -119,56 +84,6 @@
 				</section>
 			</main>
 		</div>
-		<footer class="footer">
-			<span>© 2026 Lukas Burtscher · Dokumentation</span>
-			<span>Hilti &amp; Jehle · HJ Support</span>
-		</footer>
-		<script>
-			"use strict";
-			const form = document.getElementById("feedback");
-			const button = document.getElementById("send");
-			const status = document.getElementById("feedback-status");
-			const endpoint = form.dataset.endpoint.trim();
-			const configured = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint);
-
-			function showStatus(message, state = "") {
-				status.textContent = message;
-				status.dataset.state = state;
-			}
-
-			// No recipient or API credentials are stored in the public website.
-			// Without a valid configured endpoint, the form never sends anything.
-			button.disabled = !configured;
-			if (configured) showStatus("");
-
-			const selectedTool = new URLSearchParams(location.search).get("tool");
-			const toolSelect = document.getElementById("tool");
-			for (const option of toolSelect.options) {
-				if (option.value === selectedTool) toolSelect.value = selectedTool;
-			}
-
-			form.addEventListener("submit", async (event) => {
-				event.preventDefault();
-				if (!configured || button.disabled || !form.reportValidity()) return;
-				button.disabled = true;
-				showStatus("Feedback wird gesendet …");
-
-				try {
-					const response = await fetch(endpoint, {
-						method: "POST",
-						body: new FormData(form),
-						headers: { Accept: "application/json" }
-					});
-					if (!response.ok) throw new Error("Versand fehlgeschlagen");
-
-					form.reset();
-					showStatus("Vielen Dank! Dein Feedback wurde übermittelt.", "success");
-				} catch (error) {
-					showStatus("Das Feedback konnte nicht gesendet werden. Bitte später erneut versuchen. Deine Eingaben bleiben erhalten.", "error");
-				} finally {
-					button.disabled = false;
-				}
-			});
-		</script>
+		<footer class="footer" data-footer></footer>
 	</body>
 </html>
