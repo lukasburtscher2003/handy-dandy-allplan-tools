@@ -91,10 +91,10 @@
         <VSMultiPlacement>False</VSMultiPlacement>
         <Interactor>True</Interactor>
         <ReadLastInput>True</ReadLastInput>
-        <SubElements>UrbGEN-v2.0.pyp</SubElements>
+        <SubElements>UrbGEN-v1.0.0.pyp</SubElements>
     </Script>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\NodeHJSelectCurvesManual.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>67b04056-c5b6-4861-907b-645cc7991531</Uuid>
         <Name>HJSelectCurvesManual</Name>
         <Enabled>True</Enabled>
@@ -252,7 +252,7 @@
         <ID>uvuprteeavpqtucrabwbtvqcbxrvyxut</ID>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodeObjectSwitcher3.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>Hallo-ich-bin-der-entwickler</Uuid>
         <Name>ObjectSwitcher3</Name>
         <Enabled>True</Enabled>
@@ -314,7 +314,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodeCheckboxInput.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>kaueroijasldjfauerasnsmcamspoyoi</Uuid>
         <Name>Rectangle</Name>
         <Enabled>True</Enabled>
@@ -324,7 +324,7 @@
         </DefaultValues>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodeCheckboxInput.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>kaueroijasldjfauerasnsmcamspoyoi</Uuid>
         <Name>L</Name>
         <Enabled>True</Enabled>
@@ -334,7 +334,7 @@
         </DefaultValues>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodeCheckboxInput.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>kaueroijasldjfauerasnsmcamspoyoi</Uuid>
         <Name>T</Name>
         <Enabled>True</Enabled>
@@ -344,7 +344,7 @@
         </DefaultValues>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodeCheckboxInput.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>kaueroijasldjfauerasnsmcamspoyoi</Uuid>
         <Name>H</Name>
         <Enabled>True</Enabled>
@@ -354,7 +354,7 @@
         </DefaultValues>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodeCheckboxInput.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>kaueroijasldjfauerasnsmcamspoyoi</Uuid>
         <Name>U</Name>
         <Enabled>True</Enabled>
@@ -364,7 +364,7 @@
         </DefaultValues>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodeCheckboxInput.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>kaueroijasldjfauerasnsmcamspoyoi</Uuid>
         <Name>+</Name>
         <Enabled>True</Enabled>
@@ -384,7 +384,7 @@
         </DefaultValues>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Navigation\NodeVariantNavigation.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>75890245-d9f9-41d4-bd20-d1020e5ff7c5</Uuid>
         <Name>VariantNavigation</Name>
         <Enabled>True</Enabled>
@@ -455,7 +455,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodePaletteValueDisplay.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>bd3ba10b-1d76-4a69-8cbd-92b8c491905b</Uuid>
         <Name>Grundstück</Name>
         <Enabled>True</Enabled>
@@ -643,7 +643,7 @@
         </DefaultValues>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\UrbGEN\NodeUrbGENIterativePlacement.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>6ebe6d97-b79a-44cb-96bf-e856eeef9c04</Uuid>
         <Name>UrbGENIterativePlacement</Name>
         <Enabled>True</Enabled>
@@ -772,7 +772,7 @@
         </DefaultValues>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\UrbGEN\NodeUrbGENNSGA2.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>67384da0-51fd-57fa-8858-7bd1c66d5541</Uuid>
         <Name>UrbGENNSGA2</Name>
         <Enabled>True</Enabled>
@@ -859,7 +859,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Navigation\NodeVariantNavigation.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>75890245-d9f9-41d4-bd20-d1020e5ff7c5</Uuid>
         <Name>BuildingNavigation</Name>
         <Enabled>True</Enabled>
@@ -877,7 +877,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\UrbGEN\NodeUrbGENEditBuilding.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>c808ac09-5485-57de-81b1-1ba6a33f6f1e</Uuid>
         <Name>UrbGENEditBuilding</Name>
         <Enabled>True</Enabled>
@@ -947,7 +947,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\UrbGEN\NodeUrbGENVariantReport.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>a936374e-63af-5f98-a732-ea0c6b27b54d</Uuid>
         <Name>UrbGENVariantReport</Name>
         <Enabled>True</Enabled>
@@ -1009,7 +1009,7 @@
         </DefaultValues>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodePaletteValueDisplay.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>bd3ba10b-1d76-4a69-8cbd-92b8c491905b</Uuid>
         <Name>PaletteValueDisplay</Name>
         <Enabled>True</Enabled>
@@ -1027,7 +1027,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodePaletteValueDisplay.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>bd3ba10b-1d76-4a69-8cbd-92b8c491905b</Uuid>
         <Name>PaletteValueDisplay</Name>
         <Enabled>True</Enabled>
@@ -1045,7 +1045,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodePaletteValueDisplay.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>bd3ba10b-1d76-4a69-8cbd-92b8c491905b</Uuid>
         <Name>PaletteValueDisplay</Name>
         <Enabled>True</Enabled>
@@ -1060,7 +1060,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodePaletteValueDisplay.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>bd3ba10b-1d76-4a69-8cbd-92b8c491905b</Uuid>
         <Name>PaletteValueDisplay</Name>
         <Enabled>True</Enabled>
@@ -1075,7 +1075,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\Palette\NodeCheckboxInput.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>kaueroijasldjfauerasnsmcamspoyoi</Uuid>
         <Name>AbstandsArea</Name>
         <Enabled>True</Enabled>
@@ -1151,7 +1151,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\DrawingFiles\NodeDrawingFileSelection.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>98c774f2-0c2e-4cf0-9728-0cb98043ba7c</Uuid>
         <Name>DrawingFileSelection</Name>
         <Enabled>True</Enabled>
@@ -1173,7 +1173,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\UrbGEN\NodeUrbGENTypologyFootprints.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>79a6a8c4-bb92-47ec-b3b5-4809e27665c8</Uuid>
         <Name>UrbGENTypologyFootprints</Name>
         <Enabled>True</Enabled>
@@ -1226,7 +1226,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\NodeHJGeometryElement.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>83f8a393-70c7-4ef5-b185-38f352fc37d9</Uuid>
         <Name>HJGeometryElement</Name>
         <Enabled>True</Enabled>
@@ -1241,7 +1241,7 @@
         </Constraints>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\DrawingFiles\NodeCreateToDrawingFile.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>Diese-N0de-wurd3-se1bst-erste11t</Uuid>
         <Name>In Teilbild erstellen</Name>
         <Enabled>True</Enabled>
@@ -1265,7 +1265,7 @@
         <Enabled>True</Enabled>
         <ID>ruqrxvxtdvpvtwrvayxdbpaevqsbqbdt</ID>
         <DefaultValues>
-            <DefaultValue Name="TutorialLink">https://lukasburtscher2003.github.io/handy-dandy-allplan-docs/</DefaultValue>
+            <DefaultValue Name="TutorialLink">https://lukasburtscher2003.github.io/handy-dandy-allplan-tools/</DefaultValue>
             <DefaultValue Name="InfoPicture" Text="Der Knopf hier führt zur Startseite der HJ-Tools Website" />
         </DefaultValues>
     </SubElement>
@@ -1282,7 +1282,7 @@
         </DefaultValues>
     </SubElement>
     <SubElement>
-        <PyP>Std\VisualScripts\NodeLib\Classic Library\UrbGEN\NodeUrbGENSetbackSurfaces.pypsub</PyP>
+        <PyP>file:///fk-storage.h-j.at/Programme/Allplan2027/</PyP>
         <Uuid>3d89e5c8-7af3-4b96-8c7d-1c6966b9a001</Uuid>
         <Name>UrbGENSetbackSurfaces</Name>
         <Enabled>True</Enabled>
