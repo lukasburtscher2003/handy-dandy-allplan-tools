@@ -1,0 +1,24 @@
+.help-field{display:flex;gap:8px;align-items:flex-start;min-width:0}
+.help-field>label,.help-field-content>:first-child{flex:1;min-width:0}
+.help-field .help-button{flex:0 0 23px;width:23px;height:23px;min-height:23px;padding:0;margin:0;border:1px solid #837b19;border-radius:50%;background:#242309;color:#fff37a;font:700 13px/21px "Segoe UI",Arial,sans-serif;cursor:help;text-align:center}
+.help-field .help-button:hover,.help-field .help-button[aria-expanded=true]{background:#fff000;color:#080808;border-color:#fff000}
+.help-field .help-button:focus-visible{outline:2px solid #fff000;outline-offset:3px}
+.help-field-check .help-button{margin-top:15px}.help-field-caption{align-items:center;margin-top:13px;margin-bottom:6px}
+.help-field-caption>label{margin:0}.help-field-content>small{margin-top:0}
+.help-field-check>.check{flex:1}.help-field-content{align-items:center}
+.help-field-content>button.text{text-align:left}
+#resize,#recenter{display:block;width:100%;text-align:left;padding:7px 0}
+.context-help{position:fixed;z-index:10000;box-sizing:border-box;width:max-content;max-width:310px;padding:12px 14px;background:#101010;color:#f6f6f6;border:1px solid #5c5826;border-top:3px solid #fff000;border-radius:8px;box-shadow:0 5px 22px #0007;font:12px/1.6 "Segoe UI",Arial,sans-serif;overflow:auto;white-space:normal;overflow-wrap:anywhere;cursor:default}
+.context-help[hidden]{display:none}.compact-note{margin:8px 0}.source-settings{border-top:1px solid #333;margin-top:20px;padding-top:5px}
+.hj-app .step h2{font-size:14px}.hj-app .dimensions{min-width:0}.hj-app .dimensions .help-field{gap:5px}.hj-app .dimensions .help-button{flex-basis:20px;width:20px;height:20px;min-height:20px;line-height:18px}
+@media(max-width:650px){.context-help{font-size:13px}.help-field .help-button{flex-basis:26px;width:26px;height:26px;line-height:24px}}
+
+/* Controls in the print dialog: compact help aligned with editable fields. */
+#printSection .help-field { margin-top: 8px; margin-bottom: 8px; }
+#printSection .help-field > label { width: auto; }
+#printSection .help-field .help-button { margin-top: 3px; }
+#printSection .help-field-check .help-button { margin-top: 5px; }
+#printSection .dimensions .help-field { min-width: 0; }
+#printSection .print-frame-actions .help-field { flex: 1 1 auto; }
+#printSection .print-frame-actions .help-field > button:not(.help-button) { flex: 1; }
+@media(max-width:650px){#printSection .help-field { align-items:center; }}

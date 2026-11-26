@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="540" viewBox="0 0 720 540">
+  <defs>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".48 .13" numOctaves="3" stitchTiles="stitch" seed="21"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <linearGradient id="board" x2="0" y2="1">
+      <stop stop-color="#c5c5c1"/><stop offset=".6" stop-color="#b1b1ae"/><stop offset="1" stop-color="#bdbdb9"/>
+    </linearGradient>
+    <radialGradient id="hole"><stop stop-color="#787975"/><stop offset=".72" stop-color="#92938e"/><stop offset=".85" stop-color="#7a7b77"/><stop offset="1" stop-color="#c3c3bf"/></radialGradient>
+  </defs>
+  <path fill="url(#board)" d="M0 0h720v540H0z"/>
+  <path fill="#aaa" filter="url(#grain)" opacity=".31" d="M0 0h720v540H0z"/>
+  <g stroke="#6f706c" opacity=".42"><path d="M0 133h720M0 269h720M0 404h720"/><path d="M268 0v133M562 133v136M175 269v135M470 404v136"/></g>
+  <g stroke="#eee" opacity=".5"><path d="M0 135h720M0 271h720M0 406h720"/></g>
+  <g fill="url(#hole)" opacity=".6"><circle cx="98" cy="83" r="10"/><circle cx="546" cy="345" r="10"/></g>
+  <g stroke="#737470" stroke-width="1" opacity=".17"><path d="M0 29h227m74 12h290M18 100h333m19 92h322M3 223h265m54 9h323M0 295h301m56 43h301M28 461h401m46 39h225"/></g>
+</svg>

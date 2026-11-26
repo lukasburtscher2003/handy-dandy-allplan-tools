@@ -1,7 +1,7 @@
 plugin:
   name: HJ Tools
   UUID: 2d934cb8-9941-4863-8302-d472023100a8
-  version: 1.0.0
+  version: 2.0.0
   developer: lukasburtscher
   default-language: de
   min-allplan-version: 2027
@@ -28,6 +28,24 @@ tools:
       small: PythonPartsActionbar\HJ_Tools\urbgen_24x24.png
       large: PythonPartsActionbar\HJ_Tools\urbgen_128x128.png
 
+  - id: geoimport
+    pyp: Library\HJ_Tools\GeoIMPORT.pyp
+    display-name:
+      de: Geodatenimport
+      en: Geo-data-import
+    icons:
+      small: PythonPartsActionbar\HJ_Tools\geoimport_24x24.png
+      large: PythonPartsActionbar\HJ_Tools\geoimport_128x128.png
+
+  - id: modelcheck
+    pyp: Library\HJ_Tools\GeoIMPORT.pyp
+    display-name:
+      de: Modelcheck
+      en: Modelcheck
+    icons:
+      small: PythonPartsActionbar\HJ_Tools\modelcheck_24x24.png
+      large: PythonPartsActionbar\HJ_Tools\modelcheck_128x128.png
+
 task-area:
   display-name:
     de: HJ Tools
@@ -36,3 +54,5 @@ task-area:
     - dev-help
     - "****"
     - urbgen
+    - geoimport
+    - modelcheck

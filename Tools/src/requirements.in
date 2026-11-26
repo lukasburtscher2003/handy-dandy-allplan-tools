@@ -1,0 +1,14 @@
+# Allplan plugin manager dependencies; IT approval required.
+# Unpinned deliberately: Allplan shares one Python environment among plugins.
+Flask
+requests
+numpy
+scipy
+shapely
+pyproj
+rasterio
+laspy
+lazrs
+ezdxf
+reportlab
+Pillow

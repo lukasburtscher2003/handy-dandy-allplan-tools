@@ -1,0 +1,46 @@
+/* Intranet portal reference: black cards, vivid yellow, concrete formwork.
+   Shared by desktop and intranet; export colours and calculations are unchanged. */
+:root{--ink:#f4f4f4;--muted:#b4bac0;--line:#333;--paper:#050505;--accent:#fff000;--focus:#fff000}
+body.hj-app{background:#b8b8b4 url('/brand/concrete.svg') repeat;font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);color-scheme:dark}
+.hj-app header{height:66px;padding:0 22px;background:#000;border-top:0;border-bottom:1px solid #303030;gap:16px}
+.hj-app .brand{gap:12px;color:#fff}.hj-app .brand-logo{width:40px;height:40px;border-radius:3px}
+.hj-app .brand-copy{padding:0;border:0}.hj-app .brand-copy>span{font:800 10px/1.3 "Segoe UI",Arial,sans-serif;letter-spacing:.8px;color:var(--accent)}
+.hj-app .brand b{font:700 20px/1.2 "Segoe UI",Arial,sans-serif;letter-spacing:0;margin-top:2px}
+.hj-app .local{display:flex;align-items:center;gap:12px;color:#fff;font-size:11px;line-height:1.4;white-space:normal}
+.hj-app .local small{margin:0;color:#abb1b7;font-size:10px}.hj-app .environment-badge{display:inline-block;background:var(--accent);color:#000;padding:4px 7px;border-radius:4px;font-size:9px;font-weight:800;letter-spacing:.6px}
+.hj-app main{height:calc(100vh - 66px);grid-template-columns:370px minmax(0,1fr);gap:12px;padding:12px}
+.hj-app aside{padding:0 4px 0 0;background:transparent;border:0;scrollbar-color:#555 transparent;scrollbar-width:thin}
+.hj-app section{background:#030303;border:1px solid #292929;border-radius:11px;padding:18px;margin:0 0 12px;box-shadow:0 2px 5px #0002}
+.hj-app h2{font:700 15px/1.3 "Segoe UI",Arial,sans-serif;letter-spacing:0;color:#fff}
+.hj-app section>h2{border-left:3px solid var(--accent);padding-left:10px;margin-bottom:12px}
+.hj-app .step{gap:11px;margin-bottom:16px}.hj-app .step>span{display:grid;place-items:center;min-width:34px;height:34px;padding:0;background:var(--accent);color:#050505;border-radius:8px;font:800 12px/1 "Segoe UI",Arial,sans-serif}
+.hj-app .step .text{color:#b4bac0;font-size:10px}.hj-app label{font-size:12px;color:#f0f1f2}.hj-app small,.hj-app .help,.hj-app p{color:#b4bac0;line-height:1.6}
+.hj-app input:not([type=checkbox]):not([type=range]),.hj-app select{background:#151515;border:1px solid #3c3c3c;border-radius:6px;color:#f5f5f5;min-height:39px;padding:9px 10px;font-size:12px}
+.hj-app input::placeholder{color:#8f969b}.hj-app input[type=checkbox],.hj-app progress{accent-color:var(--accent)}
+.hj-app input:focus,.hj-app select:focus,.hj-app button:focus-visible,.hj-app a:focus-visible,.hj-app summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.hj-app input:disabled,.hj-app select:disabled{opacity:.55}.hj-app input[type=number]{color-scheme:dark}
+.hj-app .searchrow button{background:var(--accent);border-color:var(--accent);color:#000;border-radius:7px;width:42px;font-size:23px}
+.hj-app button{border-radius:6px}.hj-app button:disabled{opacity:.4}.hj-app .text{color:#d6dadd;text-decoration-color:#696f73;font-size:11px}
+.hj-app .text:hover:enabled{color:var(--accent)}.hj-app .secondary{background:#151515;border-color:#414141;color:#fff;padding:10px;font-size:12px;font-weight:600}
+.hj-app .secondary:hover:enabled{background:#252510;border-color:#d7ce00}.hj-app .primary{background:var(--accent);color:#000;border-color:var(--accent);padding:14px;font-weight:750}
+.hj-app .primary:hover:enabled,.hj-app .searchrow button:hover:enabled{background:#fff76b;border-color:#fff76b}
+.hj-app .area{background:#1b1b0c;color:#fff68a;border:1px solid #575313;border-left:3px solid var(--accent);border-radius:5px;font-size:12px}
+.hj-app .dimensions{gap:10px}.hj-app .dimensions label{min-width:0}.hj-app .raster-input{gap:12px}.hj-app .raster-input input[type=range]{accent-color:var(--accent);min-width:0;width:140px}.hj-app .raster-input input[type=number]{width:80px}
+.hj-app .check{margin:17px 0 9px}.hj-app .check b{font-size:13px}.hj-app .options{margin-left:24px}.hj-app #terrainFormats,.hj-app #parcelsFormats,.hj-app #aerialFormats{padding-top:9px;border-top:1px solid #282828;color:#e0e3a2;font-size:10px;margin-top:12px}
+.hj-app #advanced{border:0;padding:0}.hj-app #advanced summary{color:#fff;font-size:13px}.hj-app #advanced h3{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.5px;margin-top:24px}
+.hj-app .formats{gap:10px}.hj-app .formats label{font-size:11px}.hj-app #downloads a,.hj-app #history a{background:#141409;border:1px solid #5e5910;color:#fff47e;border-radius:6px}
+.hj-app details{border-color:#292929}.hj-app footer{background:#000;border:1px solid #292929;border-radius:8px;padding:12px;font-size:10px;color:#b4bac0;line-height:1.7}
+.hj-app .result{border-color:#353535;background:#121212;color:#fff;border-radius:7px;padding:11px}.hj-app .result span{color:#aab1b6}.hj-app .result:hover{background:#24240d}.hj-app .result.active{background:#23230a;border-color:#b9ad00;border-left:3px solid var(--accent)}
+.hj-app .mapwrap{border:1px solid #353535;border-radius:11px;overflow:hidden;box-shadow:0 2px 8px #0003;background:#bbb}
+.hj-app #map{background:#b8b8b4 url('/brand/concrete.svg') repeat}
+.hj-app .mapbar{top:14px;left:14px;right:14px;padding:13px 16px;background:#030303f5;border:1px solid #333;border-left:4px solid var(--accent);border-radius:8px;box-shadow:0 3px 12px #0003}
+.hj-app .eyebrow{color:var(--accent);font-size:9px;letter-spacing:.7px;font-weight:750}.hj-app .mapbar b{font-size:14px;font-weight:700;color:#fff}
+.hj-app .toggles{gap:12px}.hj-app .toggles label{font-size:11px;color:#ddd}
+.hj-app .previewcard{top:112px;right:14px;background:#050505f5;color:#fff;border:1px solid #393939;border-top:3px solid var(--accent);border-radius:9px;padding:15px;box-shadow:0 4px 15px #0004}
+.hj-app .previewcard>b{font-size:14px}.hj-app .previewcard p{font-size:12px;color:#d1d5d7}.hj-app .previewcard small{font-size:10px;color:#aeb6bb}.hj-app .legend{gap:9px;font-size:10px}
+.hj-app .legend .selected{color:#72d7a4}.hj-app .legend .buffer{color:#79b9ff}.hj-app .legend .adjacent{color:#f1b964}.hj-app .legend .enclosed{color:#c7a3ef}
+.hj-app .mapnote,.hj-app .coordinate{background:#050505ed;border:1px solid #393939;border-bottom:2px solid var(--accent);border-radius:6px;color:#ddd;padding:8px 10px;font-size:10px}
+.hj-app .mapnote{left:14px}.hj-app .coordinate{right:14px}.hj-app .leaflet-tooltip{background:#fff;color:#171717}.hj-app .leaflet-control-attribution{background:#ffffffe6;color:#222}
+.hj-app dialog{background:#080808;color:#fff;border:1px solid #404040;border-top:4px solid var(--accent);border-radius:10px}.hj-app dialog::backdrop{background:#000b}.hj-app .warning{color:#ffd16a!important}
+@media(max-width:1050px){.hj-app main{grid-template-columns:330px minmax(0,1fr);padding:10px;gap:10px}.hj-app section{padding:16px}.hj-app .mapbar{align-items:flex-start;flex-direction:column;gap:8px}.hj-app .previewcard{top:140px;width:260px}.hj-app .coordinate{display:none}}
+@media(max-width:650px){.hj-app header{height:62px;padding:0 13px;gap:10px}.hj-app .brand-logo{width:35px;height:35px}.hj-app .brand b{font-size:17px}.hj-app .brand-copy>span{font-size:9px}.hj-app .local>span:not(.environment-badge){display:none}.hj-app .local{display:flex}.hj-app main{display:flex;flex-direction:column-reverse;height:auto;padding:9px;gap:10px}.hj-app .mapwrap{height:55vh;min-height:380px}.hj-app aside{padding:0;overflow:visible}.hj-app .mapbar{top:10px;left:10px;right:10px;padding:11px 12px}.hj-app .previewcard{top:auto;bottom:59px;right:10px;width:215px;padding:10px}.hj-app .previewcard p{font-size:11px}.hj-app .mapnote{left:10px;max-width:90%}.hj-app .raster-input input[type=range]{width:120px}.hj-app section{padding:17px}}

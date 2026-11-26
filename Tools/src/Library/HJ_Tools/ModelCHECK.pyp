@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Element>
+	<Script>
+		<Name>HJ_Tools\ModelCHECK.py</Name>
+		<Title>ModelCHECK</Title>
+		<Version>1.0</Version>
+		<Interactor>False</Interactor>
+	</Script>
+	<Page>
+		<Name>ModelCheck</Name>
+		<Text>Modellprüfung</Text>
+		<Parameter>
+			<Name>SelectionRow</Name>
+			<Text>Auswahl</Text>
+			<ValueType>Row</ValueType>
+			<Parameters>
+				<Parameter>
+					<Name>Select</Name>
+					<Text>Auswählen</Text>
+					<EventId>1000</EventId>
+					<ValueType>Button</ValueType>
+				</Parameter>
+				<Parameter>
+					<Name>Recheck</Name>
+					<Text>Erneut prüfen</Text>
+					<EventId>1001</EventId>
+					<ValueType>Button</ValueType>
+				</Parameter>
+			</Parameters>
+		</Parameter>
+		<Parameter>
+			<Name>CheckNetVolume</Name>
+			<Text>Nettovolumen fehlt / null</Text>
+			<Value>True</Value>
+			<ValueType>CheckBox</ValueType>
+		</Parameter>
+		<Parameter>
+			<Name>CheckGeometry</Name>
+			<Text>Geometrievolumen fehlt / null</Text>
+			<Value>True</Value>
+			<ValueType>CheckBox</ValueType>
+		</Parameter>
+		<Parameter>
+			<Name>CheckDeviation</Name>
+			<Text>Volumenabweichung</Text>
+			<Value>True</Value>
+			<ValueType>CheckBox</ValueType>
+		</Parameter>
+		<Parameter>
+			<Name>Tolerance</Name>
+			<Text>Toleranz [%]</Text>
+			<Value>5</Value>
+			<ValueType>Double</ValueType>
+			<MinValue>0</MinValue>
+		</Parameter>
+		<Parameter>
+			<Name>OnlyVolumeCandidates</Name>
+			<Text>Volumen nur bei Körpern / Volumenattribut</Text>
+			<Value>True</Value>
+			<ValueType>CheckBox</ValueType>
+		</Parameter>
+		<Parameter>
+			<Name>CheckName</Name>
+			<Text>Bezeichnung fehlt</Text>
+			<Value>True</Value>
+			<ValueType>CheckBox</ValueType>
+		</Parameter>
+		<Parameter>
+			<Name>CheckTrade</Name>
+			<Text>Gewerk fehlt</Text>
+			<Value>False</Value>
+			<ValueType>CheckBox</ValueType>
+		</Parameter>
+		<Parameter>
+			<Name>CheckMaterial</Name>
+			<Text>Material fehlt</Text>
+			<Value>False</Value>
+			<ValueType>CheckBox</ValueType>
+		</Parameter>
+		<Parameter>
+			<Name>CheckCostGroup</Name>
+			<Text>Kostengruppe fehlt</Text>
+			<Value>False</Value>
+			<ValueType>CheckBox</ValueType>
+		</Parameter>
+		<Parameter>
+			<Name>MarkElements</Name>
+			<Text>Aktuellen Fehler markieren</Text>
+			<Value>True</Value>
+			<ValueType>CheckBox</ValueType>
+		</Parameter>
+		<Parameter>
+			<Name>SelectedCount</Name>
+			<Text>Ausgewählt</Text>
+			<Value>0</Value>
+			<ValueType>Integer</ValueType>
+			<Enable>False</Enable>
+		</Parameter>
+		<Parameter>
+			<Name>ErrorCount</Name>
+			<Text>Fehlerhafte Elemente</Text>
+			<Value>0</Value>
+			<ValueType>Integer</ValueType>
+			<Enable>False</Enable>
+		</Parameter>
+		<Parameter>
+			<Name>SkippedCount</Name>
+			<Text>Volumen nicht geprüft</Text>
+			<Value>0</Value>
+			<ValueType>Integer</ValueType>
+			<Enable>False</Enable>
+		</Parameter>
+		<Parameter>
+			<Name>Status</Name>
+			<Text>Status</Text>
+			<Value>Bauteile auswählen.</Value>
+			<ValueType>String</ValueType>
+			<Enable>False</Enable>
+		</Parameter>
+		<Parameter>
+			<Name>NavigationRow</Name>
+			<Text>Fehlernavigation</Text>
+			<ValueType>Row</ValueType>
+			<Parameters>
+				<Parameter>
+					<Name>Previous</Name>
+					<Text>Zurück</Text>
+					<EventId>1002</EventId>
+					<ValueType>Button</ValueType>
+				</Parameter>
+				<Parameter>
+					<Name>Next</Name>
+					<Text>Weiter</Text>
+					<EventId>1003</EventId>
+					<ValueType>Button</ValueType>
+				</Parameter>
+				<Parameter>
+					<Name>Zoom</Name>
+					<Text>Zoom</Text>
+					<EventId>1004</EventId>
+					<ValueType>Button</ValueType>
+				</Parameter>
+			</Parameters>
+		</Parameter>
+		<Parameter>
+			<Name>ErrorIndex</Name>
+			<Text>Fehler</Text>
+			<Value>0 / 0</Value>
+			<ValueType>String</ValueType>
+			<Enable>False</Enable>
+		</Parameter>
+		<Parameter>
+			<Name>ElementName</Name>
+			<Text>Bauteil</Text>
+			<Value>-</Value>
+			<ValueType>String</ValueType>
+			<Enable>False</Enable>
+		</Parameter>
+		<Parameter>
+			<Name>ErrorDetail</Name>
+			<Text>Prüfergebnis</Text>
+			<Value>-</Value>
+			<ValueType>String</ValueType>
+			<Enable>False</Enable>
+		</Parameter>
+		<Parameter>
+			<Name>NetVolume</Name>
+			<Text>Nettovolumen [m³]</Text>
+			<Value>-</Value>
+			<ValueType>String</ValueType>
+			<Enable>False</Enable>
+		</Parameter>
+		<Parameter>
+			<Name>GeometryVolume</Name>
+			<Text>Geometrievolumen [m³]</Text>
+			<Value>-</Value>
+			<ValueType>String</ValueType>
+			<Enable>False</Enable>
+		</Parameter>
+	</Page>
+</Element>

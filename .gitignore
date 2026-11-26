@@ -24,3 +24,6 @@ build/
 
 # Private Entwicklerdokumentation
 .dev/
+
+# Plugin-Builder
+Build-Plugin.ps1
